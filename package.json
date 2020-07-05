@@ -1,0 +1,24 @@
+{
+  "name": "questionaresystem",
+  "version": "1.0.0",
+  "description": "use pwa with html be front ware ,node.js be back ware ,mongoDB be DB, C# be caculator to make a questionareSystem.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --exit test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leon123858/questionareSystem.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leon123858/questionareSystem/issues"
+  },
+  "homepage": "https://github.com/leon123858/questionareSystem#readme",
+  "dependencies": {
+    "mongodb": "^3.5.9",
+    "nconf": "^0.10.0"
+  }
+}
