@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>桌球運動員精準計畫</h1>
+</div>
+<br>
+<div class="book">
+    <h2 style="text-align: center">基本資料填寫</h2>
+    <span class="person_data">編號:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:N1234">
+    <br>
+    <span class="person_data">姓名:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:王小明">
+    <br>
+    <span class="person_data">生理性別:</span>
+    <form class="radio_btn">
+        <input type="radio" name="gender" value="Taipei"> 男
+        <input type="radio" name="gender" value="Taoyuan"> 女
+    </form>
+    <br>
+    <span class="person_data">年齡:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:20">
+    <br>
+    <span class="person_data">生日:</span>&#160&#160&#160&#160<input type="date" name="欄位名稱" class="in_text" >
+    <br>
+    <span class="person_data" >身分證字號:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:A123456789">
+    <br>
+    <span class="person_data" >身高 (cm) :</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:168.9">
+    <br>
+    <span class="person_data" >體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:70">
+    <br>
+    <br>
+</div>
+<div class="fix_button">
+    <button type="button">我已填寫完畢，去填量表 > </button>
+</div>
+<script>
+$(document).ready(function() {
+   
+});
+</script>
+</body>
+</html>

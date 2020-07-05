@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>桌球運動員精準計畫</h1>
+</div>
+<br>
+<div class="book" style="line-height:normal">
+    <h2 >運動員因應技能量表</h2>
+    <form class="radio_btn">
+1. 在每一天或每一週的練習，我都會設立一個特別的目標來引導自己練習。
+<br>
+<input type = "radio" name = "question1" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question1" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question1" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question1" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+2. 我會把自己最大的天份及技能表現出來。 
+<br>
+<input type = "radio" name = "question2" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question2" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question2" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question2" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+3. 當教練告訴我如何改正錯誤時，我傾向於獨自承受並且 感到煩惱。
+<br>
+<input type = "radio" name = "question3" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question3" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question3" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question3" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+4. 當我在從事運動時，我能夠集中注意力而不會分心。
+<br>
+<input type = "radio" name = "question4" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question4" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question4" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question4" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+5. 在比賽時無論情況如何糟糕，我會保持積極及熱忱的態度。
+<br>
+<input type = "radio" name = "question5" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question5" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question5" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question5" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+6. 在有壓力下我傾向於會表現的更好，因為腦筋會更清楚。
+<br>
+<input type = "radio" name = "question6" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question6" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question6" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question6" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+7. 我相當擔心別人對於我的表現的看法。
+<br>
+<input type = "radio" name = "question7" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question7" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question7" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question7" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+8. 為了達到自己的目標，我會傾向於做一些計劃。
+<br>
+<input type = "radio" name = "question8" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question8" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question8" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question8" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+9. 我對於自己即將會表現的很好相當有信心。
+<br>
+<input type = "radio" name = "question9" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question9" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question9" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question9" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+10. 當教練批評我時，我會感到煩惱而不是得到幫助。
+<br>
+<input type = "radio" name = "question10" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question10" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question10" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question10" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+11. 當我聽到或看到什麼時，並不會產生分離思考而造成干擾，這對我來說是容易的。
+<br>
+<input type = "radio" name = "question11" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question11" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question11" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question11" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+12. 我會擔心自己的表現，因此給自己很多壓力。
+<br>
+<input type = "radio" name = "question12" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question12" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question12" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question12" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+13. 在每一次的練習中，我會設定自己的表現目標。
+<br>
+<input type = "radio" name = "question13" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question13" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question13" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question13" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+14. 我不必別人催我努力練習，也會 100%的付出。
+<br>
+<input type = "radio" name = "question14" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question14" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question14" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question14" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+15. 假如教練對我有所批評或大叫時，我會改正錯誤而不會覺得很難過。
+<br>
+<input type = "radio" name = "question15" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question15" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question15" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question15" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+16. 在我的運動領域中，對於一些突發的狀況我能夠處理的很好。
+<br>
+<input type = "radio" name = "question16" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question16" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question16" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question16" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+17. 當事情變糟時，我通常會告訴自己冷靜下來，而且非常有效。
+<br>
+<input type = "radio" name = "question17" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question17" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question17" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question17" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+18. 比赛中的壓力越大時，我越能夠享受它。
+<br>
+<input type = "radio" name = "question18" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question18" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question18" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question18" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+19. 在比赛時，我會害怕犯錯或無法成功。
+<br>
+<input type = "radio" name = "question19" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question19" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question19" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question19" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+20. 比賽開始之前，在我的腦海中已經蘊釀了一套自己的比賽計劃。
+<br>
+<input type = "radio" name = "question20" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question20" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question20" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question20" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+21. 當我覺得自己太緊張時，我能夠很快的放鬆身體並且鎮定下來。
+<br>
+<input type = "radio" name = "question21" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question21" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question21" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question21" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+22. 有壓力的情境對我而言是一種挑戰，我樂於接受。
+<br>
+<input type = "radio" name = "question22" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question22" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question22" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question22" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+23. 我會想像如果自己失敗或放棄了會發生什麼事。
+<br>
+<input type = "radio" name = "question23" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question23" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question23" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question23" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+24. 無論發生什麼事情，我都能控制自己的情緒。
+<br>
+<input type = "radio" name = "question24" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question24" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question24" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question24" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+25. 我能夠很容易的引導自己的注意力焦點在單一的人或物體上。
+<br>
+<input type = "radio" name = "question25" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question25" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question25" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question25" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+26. 當我沒有達到目標時，會激勵我更加的努力。 
+<br>
+<input type = "radio" name = "question26" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question26" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question26" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question26" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+27. 我會仔細的聆聽教練的指示及建議，並以此來改善自己的技術。
+<br>
+<input type = "radio" name = "question27" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question27" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question27" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question27" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+28. 當壓來臨時我很少犯錯，因為我會更專注。
+<br>
+<input type = "radio" name = "question28" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question28" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question28" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question28" value = "4" > 4 幾乎都是 <br>
+<br></form>
+
+    
+    <br>
+    <br>
+</div>
+<div class="fix_button">
+    <button type="button">我已填寫完畢，去填量表 > </button>
+</div>
+<script>
+$(document).ready(function() {
+   
+});
+</script>
+</body>
+</html>

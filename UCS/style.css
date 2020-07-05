@@ -1,0 +1,90 @@
+/*body { 
+    background-color: #fff;
+    color: #333;
+    font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* styles for the editor */
+
+/*.playable {
+    font-family: monospace;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #F4F7F8;
+    border: none;
+    border-left: 6px solid #558ABB;
+    color: #4D4E53;
+    width: 90%;
+    max-width: 700px;
+    padding: 10px 10px 0px;
+    font-size: 90%;
+  }*/
+
+/*start*/
+
+
+.fix_title{
+    background-color: #0D31F7;
+    text-align: center;
+    color: white;
+    font-family: Microsoft JhengHei;
+    line-height: 5px;
+    position:fixed;
+    width: 100%;
+}
+
+.book{
+    margin-top: 8%;
+    font-family: Microsoft JhengHei;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 350%;
+}
+.fix_button{
+    background-color: #0D31F7;
+    text-align: center;
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    z-index:0;
+}
+
+.person_data{
+    font-family: Microsoft JhengHei;
+    font-size: 120%;
+}
+
+.in_text{
+    border:3px; 
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    font-size: 120%;
+}
+
+.radio_btn{
+    margin:0px; 
+    display:inline;
+    font-size: 120%;
+}
+
+.input_btn{
+    border:0;
+    color: black;
+    font-family: Microsoft JhengHei;
+    background-color: #DBDBDB;
+    width:70%;
+    font-size: 180%;
+}
+
+button{
+    border:0;
+    color: white;
+    font-family: Microsoft JhengHei;
+    background-color: #0D31F7;
+    width:100%;
+    font-size: 180%;
+}
