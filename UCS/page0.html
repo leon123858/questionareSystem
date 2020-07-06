@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <script src="jquery.js"></script>
+    <script src="func.js"></script>
     <script src="jquery.cookie.js"></script>
     <style type="text/css">
         @import "style.css"
@@ -17,34 +18,63 @@
 <br>
 <div class="book">
     <h2 style="text-align: center">基本資料填寫</h2>
-    <span class="person_data">編號:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:N1234">
+    <span class="person_data">1.編號:</span>&#160&#160&#160&#160<input type="text" name="q1" class="in_text" placeholder="ex:N1234" maxlength=5 onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
     <br>
-    <span class="person_data">姓名:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:王小明">
+    <span class="person_data">2.姓名:</span>&#160&#160&#160&#160<input type="text" name="q2" class="in_text" placeholder="ex:王小明" onkeyup="value=value.replace(/[0-9]/,'')">
     <br>
-    <span class="person_data">生理性別:</span>
-    <form class="radio_btn">
-        <input type="radio" name="gender" value="Taipei"> 男
-        <input type="radio" name="gender" value="Taoyuan"> 女
+    <span class="person_data">3.生理性別:</span>
+    <form class="radio_btn" >
+        <input type="radio" name="q3" value="male" checked> 男
+        <input type="radio" name="q3" value="female"> 女
     </form>
     <br>
-    <span class="person_data">年齡:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:20">
+    <span class="person_data">4.年齡:</span>&#160&#160&#160&#160<input type="text" name="q4" class="in_text" placeholder="ex:20" input onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength=2>
     <br>
-    <span class="person_data">生日:</span>&#160&#160&#160&#160<input type="date" name="欄位名稱" class="in_text" >
+    <span class="person_data">5.生日:</span>&#160&#160&#160&#160<input type="date" name="q5" class="in_text" >
     <br>
-    <span class="person_data" >身分證字號:</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:A123456789">
+    <span class="person_data" >6.身分證字號:</span>&#160&#160&#160&#160<input type="text" name="q6" class="in_text" placeholder="ex:A123456789" maxlength=10 onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
     <br>
-    <span class="person_data" >身高 (cm) :</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:168.9">
+    <span class="person_data" >7.身高 (cm) :</span>&#160&#160&#160&#160<input type="text" name="q7" class="in_text" placeholder="ex:168.9" onkeyup="if(isNaN(value))execCommand('undo')">
     <br>
-    <span class="person_data" >體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="欄位名稱" class="in_text" placeholder="ex:70">
+    <span class="person_data" >8.體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="q8" class="in_text" placeholder="ex:70" onkeyup="if(isNaN(value))execCommand('undo')">
     <br>
     <br>
 </div>
-<div class="fix_button">
+<div id="next" class="fix_button">
     <button type="button">我已填寫完畢，去填量表 > </button>
 </div>
 <script>
+
 $(document).ready(function() {
-   
+    $("#next").click(function(){
+        var num = check(window.document,8);
+        if(num != 0){
+            var str = "";
+            for(var i in num)
+                str += num[i] + ",";
+            alert("問題 " + str + " 沒填");
+        }
+        else{
+            var str = "";
+            for(var i=1;i<=8;i++){
+                if(i == 3){
+                    str += $('input[name=q3]:checked').val() + "_";
+                }
+                else if(i == 8){
+                    str += window.document.getElementsByName("q" + i)[0].value;
+                }
+                else if(i == 2){
+                    str += encodeURI(window.document.getElementsByName("q" + i)[0].value) + "_";
+                }
+                else{
+                    str += window.document.getElementsByName("q" + i)[0].value + "_";
+                }
+                
+            }
+            str = "num=" + window.document.getElementsByName("q" + 1)[0].value + "&include=0_" + str;
+            jumpto("memory.html?mode=load0&"+str,window);
+        }
+    });
 });
 </script>
 </body>

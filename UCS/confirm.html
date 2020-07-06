@@ -3,6 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <script src="func.js"></script>
     <script src="jquery.js"></script>
     <script src="jquery.cookie.js"></script>
     <style type="text/css">
@@ -33,11 +34,13 @@
 </div>
 <br>
 <div class="fix_button">
-    <button type="button">我已閱讀完畢，並同意上述內容 > </button>
+    <button id="confirm" type="button">我已閱讀完畢，並同意上述內容 > </button>
 </div>
 <script>
 $(document).ready(function() {
-   
+   $("#confirm").click(function(){
+       jumpto("memory.html?mode=upload",window);
+   })
 });
 </script>
 </body>

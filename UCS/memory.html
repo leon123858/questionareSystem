@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="func.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>同步中</h1>
+</div>
+
+<script>
+    function upload(num,const_unup){
+        $.ajax({
+　　　　　　'url':'http://localhost:8080/insert?'+ String($.cookie(String(num))),
+　　　　　　'method':'GET',
+　　　　　　'data':{},
+　　　　　　'success':function(data){
+             const_unup--;
+　　　　　　},
+         'error':function(xhr,status,error){
+             alert("同步失敗,進入離線模式");
+              num = 0;
+          },
+          'complete':function(xhr,status,error){
+              if(num-1 < 0){
+                  $.cookie('unup',const_unup, { expires: 100, path: '/'});
+                  jumpto("page0.html",window);
+              }
+              else
+                  upload(num-1,const_unup);
+          }
+　　　　  });
+    }
+$(document).ready(function() {
+    var url = new URL(location.href);
+    var mode = url.searchParams.get('mode');
+    var include = url.searchParams.get('include');
+    var number = url.searchParams.get('num');
+    if($.cookie('unup') == null)
+        $.cookie('unup','0', { expires: 100, path: '/'});
+    var unup = parseInt($.cookie('unup'));
+    var const_unup = unup;
+    if(mode == 'upload'){
+        if(unup == 0){
+            alert("已同步");
+            jumpto("page0.html",window);
+        }
+        else{
+            upload(unup-1,const_unup);
+        }
+    }
+    else if(mode == 'load0'){
+        $.cookie(String(unup),include, { expires: 100, path: '/'});
+        $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
+        jumpto("others.html?num=" + number,window);
+    }
+    else if(mode == 'load'){
+        var page = url.searchParams.get('page');
+        $.cookie(String(unup),page+'_'+number+'_'+include, { expires: 100, path: '/'});
+        $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
+        jumpto("show.html?num=" + number + "&page=" +page+"&include="+include,window);
+    }
+});
+</script>
+</body>
+</html>
