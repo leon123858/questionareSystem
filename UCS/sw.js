@@ -2,19 +2,19 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       'https://leon123858.github.io/questionareSystem/UCS/',
-       'https://leon123858.github.io/questionareSystem/UCS/confirm.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/memory.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/others.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/show.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/page0.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/page1.html',
-	   'https://leon123858.github.io/questionareSystem/UCS/page2.html',
-       'https://leon123858.github.io/questionareSystem/UCS/index.js',
-	   'https://leon123858.github.io/questionareSystem/UCS/jquery.js',
-	   'https://leon123858.github.io/questionareSystem/UCS/jquery.cookie.js',
-	   'https://leon123858.github.io/questionareSystem/UCS/func.js',
-	   'https://leon123858.github.io/questionareSystem/UCS/style.css',
+       '/questionareSystem/UCS/',
+       '/questionareSystem/UCS/confirm.html',
+	   '/questionareSystem/UCS/memory.html',
+	   '/questionareSystem/UCS/others.html',
+	   '/questionareSystem/UCS/show.html',
+	   '/questionareSystem/UCS/page0.html',
+	   '/questionareSystem/UCS/page1.html',
+	   '/questionareSystem/UCS/page2.html',
+       '/questionareSystem/UCS/index.js',
+	   '/questionareSystem/UCS/jquery.js',
+	   '/questionareSystem/UCS/jquery.cookie.js',
+	   '/questionareSystem/UCS/func.js',
+	   '/questionareSystem/UCS/style.css'
      ]);
    })
  );
