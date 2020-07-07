@@ -1,6 +1,10 @@
 self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
+	   if (response) {
+          return response;     // if valid response is found in cache return it
+        } 
+		else{
      return cache.addAll([
        '/questionareSystem/UCS/',
        '/questionareSystem/UCS/confirm.html',
@@ -16,6 +20,7 @@ self.addEventListener('install', function(e) {
 	   '/questionareSystem/UCS/func.js',
 	   '/questionareSystem/UCS/style.css'
      ]);
+		}
    })
  );
 });
