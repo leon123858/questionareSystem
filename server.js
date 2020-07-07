@@ -1,6 +1,7 @@
 ﻿'use strict';
 var http = require('http');
 var MongoClient = require('mongodb').MongoClient;
+var sd = require('silly-datetime');
 
 // Read in keys and secrets. Using nconf use can set secrets via
 // environment variables, command-line arguments, or a keys.json file.
@@ -22,6 +23,8 @@ http.createServer(function (req, res) {
     var obj = {
         say: '抱歉，找不到您的網頁。',
     };
+    var time = sd.format(new Date(), 'YYYY-MM-DD HH:mm:ss');
+    //console.log(time);
     var list = req.url.split('?');
     var pathname = list[0];
     var parameter = [];
@@ -40,10 +43,11 @@ http.createServer(function (req, res) {
 			if(parameter.length > 0){
 				var table = db.db("qn").collection("qn" + parameter[0]);
 				console.log(parameter);
-				var obj = { num: parameter[1]};
+                var obj = { num: parameter[1] };
 				for(var i=2;i<parameter.length;i++){
-					obj[i-1] = parameter[i];
-				}
+                    obj[i - 1] = parameter[i];
+                }
+                obj['date'] = time;
 				table.insertOne(obj, function (err, red) { // insertMany 是插入多個用的
 					if (err) throw err;
 					console.log("insert success");

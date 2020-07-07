@@ -19,6 +19,7 @@
   "homepage": "https://github.com/leon123858/questionareSystem#readme",
   "dependencies": {
     "mongodb": "^3.5.9",
-    "nconf": "^0.10.0"
+    "nconf": "^0.10.0",
+    "silly-datetime": "^0.1.2"
   }
 }

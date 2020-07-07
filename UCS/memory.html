@@ -25,7 +25,13 @@
 　　　　　　'method':'GET',
 　　　　　　'data':{},
 　　　　　　'success':function(data){
-             const_unup--;
+            var json = JSON.parse(data);
+            if(json.result == 'success')
+                const_unup--;
+            else{
+                alert("同步失敗,進入離線模式");
+                num = 0;
+            }
 　　　　　　},
          'error':function(xhr,status,error){
              alert("同步失敗,進入離線模式");

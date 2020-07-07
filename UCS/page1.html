@@ -281,7 +281,7 @@ $(document).ready(function() {
                 str += $('input[name=question'+i+']:checked').val() + "_";
             }
             str += $('input[name=question'+i+']:checked').val();
-            str = "num=" + number + "&include=1_" + str;
+            str = "num=" + number + "&include=" + str;
             jumpto("memory.html?mode=load&page=1&"+str,window);
         }
     });
