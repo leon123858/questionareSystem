@@ -47,6 +47,34 @@
           }
 　　　　  });
     }
+    function upload2(num,const_unup){
+        $.ajax({
+　　　　　　'url':'http://localhost:8080/insert?'+ String($.cookie(String(num))),
+　　　　　　'method':'GET',
+　　　　　　'data':{},
+　　　　　　'success':function(data){
+            var json = JSON.parse(data);
+            if(json.result == 'success')
+                const_unup--;
+            else{
+                alert("同步失敗,進入離線模式");
+                num = 0;
+            }
+　　　　　　},
+         'error':function(xhr,status,error){
+             alert("同步失敗,進入離線模式");
+              num = 0;
+          },
+          'complete':function(xhr,status,error){
+              if(num-1 < 0){
+                  $.cookie('unup',const_unup, { expires: 100, path: '/'});
+                  jumpto("confirm.html",window);
+              }
+              else
+                  upload(num-1,const_unup);
+          }
+　　　　  });
+    }
 $(document).ready(function() {
     var url = new URL(location.href);
     var mode = url.searchParams.get('mode');
@@ -76,6 +104,15 @@ $(document).ready(function() {
         $.cookie(String(unup),page+'_'+number+'_'+include, { expires: 100, path: '/'});
         $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
         jumpto("show.html?num=" + number+"&page="+page+"&include="+include,window);
+    }
+    else{
+        if(unup == 0){
+            alert("已同步");
+            jumpto("confirm.html",window);
+        }
+        else{
+            upload2(unup-1,const_unup);
+        }
     }
 });
 </script>
