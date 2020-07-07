@@ -41,8 +41,7 @@
 <script>
 $(document).ready(function() {
    $("#confirm").click(function(){
-       $.cookie('mode','upload', { expires: 100, path: '/'});
-       jumpto("memory.html",window);
+       jumpto("memory.html?mode=upload",window);
    })
 });
 </script>
