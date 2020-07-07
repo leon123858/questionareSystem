@@ -2,19 +2,19 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       'https://tomatoclock.000webhostapp.com/questionary/',
-       'https://tomatoclock.000webhostapp.com/questionary/confirm.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/memory.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/others.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/show.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/page0.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/page1.html',
-	   'https://tomatoclock.000webhostapp.com/questionary/page2.html',
-       'https://tomatoclock.000webhostapp.com/questionary/index.js',
-	   'https://tomatoclock.000webhostapp.com/questionary/jquery.js',
-	   'https://tomatoclock.000webhostapp.com/questionary/jquery.cookie.js',
-	   'https://tomatoclock.000webhostapp.com/questionary/func.js',
-	   'https://tomatoclock.000webhostapp.com/questionary/style.css',
+       '/',
+       '/confirm.html',
+	   '/memory.html',
+	   '/others.html',
+	   '/show.html',
+	   '/page0.html',
+	   '/page1.html',
+	   '/page2.html',
+       '/index.js',
+	   '/jquery.js',
+	   '/jquery.cookie.js',
+	   '/func.js',
+	   '/style.css',
      ]);
    })
  );
