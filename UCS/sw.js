@@ -2,19 +2,19 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       '/',
-       '/confirm.html',
-	   '/memory.html',
-	   '/others.html',
-	   '/show.html',
-	   '/page0.html',
-	   '/page1.html',
-	   '/page2.html',
-       '/index.js',
-	   '/jquery.js',
-	   '/jquery.cookie.js',
-	   '/func.js',
-	   '/style.css',
+       '/UCS/',
+       '/UCS/confirm.html',
+	   '/UCS/memory.html',
+	   '/UCS/others.html',
+	   '/UCS/show.html',
+	   '/UCS/page0.html',
+	   '/UCS/page1.html',
+	   '/UCS/page2.html',
+       '/UCS/index.js',
+	   '/UCS/jquery.js',
+	   '/UCS/jquery.cookie.js',
+	   '/UCS/func.js',
+	   '/UCS/style.css',
      ]);
    })
  );
