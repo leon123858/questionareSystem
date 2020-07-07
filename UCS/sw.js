@@ -2,19 +2,19 @@ self.addEventListener('install', function(e) {
  e.waitUntil(
    caches.open('video-store').then(function(cache) {
      return cache.addAll([
-       '/UCS/',
-       '/UCS/confirm.html',
-	   '/UCS/memory.html',
-	   '/UCS/others.html',
-	   '/UCS/show.html',
-	   '/UCS/page0.html',
-	   '/UCS/page1.html',
-	   '/UCS/page2.html',
-       '/UCS/index.js',
-	   '/UCS/jquery.js',
-	   '/UCS/jquery.cookie.js',
-	   '/UCS/func.js',
-	   '/UCS/style.css',
+       'https://leon123858.github.io/questionareSystem/UCS',
+       'https://leon123858.github.io/questionareSystem/UCS/confirm.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/memory.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/others.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/show.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/page0.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/page1.html',
+	   'https://leon123858.github.io/questionareSystem/UCS/page2.html',
+       'https://leon123858.github.io/questionareSystem/UCS/index.js',
+	   'https://leon123858.github.io/questionareSystem/UCS/jquery.js',
+	   'https://leon123858.github.io/questionareSystem/UCS/jquery.cookie.js',
+	   'https://leon123858.github.io/questionareSystem/UCS/func.js',
+	   'https://leon123858.github.io/questionareSystem/UCS/style.css',
      ]);
    })
  );
