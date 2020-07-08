@@ -105,7 +105,7 @@ $(document).ready(function() {
         $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
         jumpto("show.html?num=" + number+"&page="+page+"&include="+include,window);
     }
-    else{
+    else if(mode == 'reload'){
         if(unup == 0){
             alert("已同步");
             jumpto("confirm.html",window);
