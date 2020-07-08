@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="func.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+	<link rel="manifest" href="manifest.webmanifest">
+	<script src="index.js" defer></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>桌球運動員精準計畫</h1>
+</div>
+<br>
+<div class="book" style="line-height:normal">
+    <h2 >戈登人格剖析量表</h2>
+    <h3> 第 1 題 </h3>
+<span>A 能和別人相處融洽 , B 對自己沒有信心, C 能徹底執行任何一項工作 , D容易有點情緒化</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question1" value = "1" > A 
+<input type = "radio" name = "question1" value = "2" > B 
+<input type = "radio" name = "question1" value = "3" > C 
+<input type = "radio" name = "question1" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question2" value = "1" > A 
+<input type = "radio" name = "question2" value = "2" > B 
+<input type = "radio" name = "question2" value = "3" > C 
+<input type = "radio" name = "question2" value = "4" > D 
+<br></form>
+<h3> 第 2 題 </h3>
+<span>A 不喜歡和別人在一起, B 不會焦慮或緊張, C 一位很不可信賴的人, D 在團體討論中，居領導的地位</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question3" value = "1" > A 
+<input type = "radio" name = "question3" value = "2" > B 
+<input type = "radio" name = "question3" value = "3" > C 
+<input type = "radio" name = "question3" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question4" value = "1" > A 
+<input type = "radio" name = "question4" value = "2" > B 
+<input type = "radio" name = "question4" value = "3" > C 
+<input type = "radio" name = "question4" value = "4" > D 
+<br></form>
+<h3> 第 3 題 </h3>
+<span>A 行事有點緊張兮兮的, B 能強烈的影響別人, C 不喜歡社交性的聚會, D 一位很堅毅而穩健的工作者</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question5" value = "1" > A 
+<input type = "radio" name = "question5" value = "2" > B 
+<input type = "radio" name = "question5" value = "3" > C 
+<input type = "radio" name = "question5" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question6" value = "1" > A 
+<input type = "radio" name = "question6" value = "2" > B 
+<input type = "radio" name = "question6" value = "3" > C 
+<input type = "radio" name = "question6" value = "4" > D 
+<br></form>
+<h3> 第 4 題 </h3>
+<span>A 容易結交新朋友, B 不能長久堅守相同的工作, C 容易受到別人支配, D 即使遭遇挫折，也能自我控制</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question7" value = "1" > A 
+<input type = "radio" name = "question7" value = "2" > B 
+<input type = "radio" name = "question7" value = "3" > C 
+<input type = "radio" name = "question7" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question8" value = "1" > A 
+<input type = "radio" name = "question8" value = "2" > B 
+<input type = "radio" name = "question8" value = "3" > C 
+<input type = "radio" name = "question8" value = "4" > D 
+<br></form>
+<h3> 第 5 題 </h3>
+<span>A 能獨自做重要的決斷, B 不容易和陌生人交往, C 容易緊張或敏感激動, D 儘管有困難，還是會完成工作</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question9" value = "1" > A 
+<input type = "radio" name = "question9" value = "2" > B 
+<input type = "radio" name = "question9" value = "3" > C 
+<input type = "radio" name = "question9" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question10" value = "1" > A 
+<input type = "radio" name = "question10" value = "2" > B 
+<input type = "radio" name = "question10" value = "3" > C 
+<input type = "radio" name = "question10" value = "4" > D 
+<br></form>
+<h3> 第 6 題 </h3>
+<span>A 不太有興趣於人際交往, B 不能認真地負起責任, C 時常保持穩健而鎮靜, D 在團體活動中常居於領導地位</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question11" value = "1" > A 
+<input type = "radio" name = "question11" value = "2" > B 
+<input type = "radio" name = "question11" value = "3" > C 
+<input type = "radio" name = "question11" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question12" value = "1" > A 
+<input type = "radio" name = "question12" value = "2" > B 
+<input type = "radio" name = "question12" value = "3" > C 
+<input type = "radio" name = "question12" value = "4" > D 
+<br></form>
+<h3> 第 7 題 </h3>
+<span>A 可以信賴的人, B 事情不順利時，容易心情煩躁, C 對自己的意見不太有把握, D 比較喜歡有人作伴</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question13" value = "1" > A 
+<input type = "radio" name = "question13" value = "2" > B 
+<input type = "radio" name = "question13" value = "3" > C 
+<input type = "radio" name = "question13" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question14" value = "1" > A 
+<input type = "radio" name = "question14" value = "2" > B 
+<input type = "radio" name = "question14" value = "3" > C 
+<input type = "radio" name = "question14" value = "4" > D 
+<br></form>
+<h3> 第 8 題 </h3>
+<span>A 覺得影響別人是容易的, B 遇到任何阻礙，都要把工作做完, C 社交關係僅限於少數幾個人, D 是一位比較神經過敏的人</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question15" value = "1" > A 
+<input type = "radio" name = "question15" value = "2" > B 
+<input type = "radio" name = "question15" value = "3" > C 
+<input type = "radio" name = "question15" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question16" value = "1" > A 
+<input type = "radio" name = "question16" value = "2" > B 
+<input type = "radio" name = "question16" value = "3" > C 
+<input type = "radio" name = "question16" value = "4" > D 
+<br></form>
+<h3> 第 9 題 </h3>
+<span>A 不太容易結交朋友, B 能積極參與團體事務, C 能履行例行職責至完成為止, D 情緒不太穩定平衡</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question17" value = "1" > A 
+<input type = "radio" name = "question17" value = "2" > B 
+<input type = "radio" name = "question17" value = "3" > C 
+<input type = "radio" name = "question17" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question18" value = "1" > A 
+<input type = "radio" name = "question18" value = "2" > B 
+<input type = "radio" name = "question18" value = "3" > C 
+<input type = "radio" name = "question18" value = "4" > D 
+<br></form>
+<h3> 第 10 題 </h3>
+<span>A 確信和別人的關係, B 情感頗易受到傷害, C 具有很好的工作習慣, D 只願和少數朋友來往</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question19" value = "1" > A 
+<input type = "radio" name = "question19" value = "2" > B 
+<input type = "radio" name = "question19" value = "3" > C 
+<input type = "radio" name = "question19" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question20" value = "1" > A 
+<input type = "radio" name = "question20" value = "2" > B 
+<input type = "radio" name = "question20" value = "3" > C 
+<input type = "radio" name = "question20" value = "4" > D 
+<br></form>
+<h3> 第 11 題 </h3>
+<span>A 有點容易激動, B 能夠應付任何情況, C 不喜歡和陌生人交談, D 對任何從事的工作能貫徹始終</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question21" value = "1" > A 
+<input type = "radio" name = "question21" value = "2" > B 
+<input type = "radio" name = "question21" value = "3" > C 
+<input type = "radio" name = "question21" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question22" value = "1" > A 
+<input type = "radio" name = "question22" value = "2" > B 
+<input type = "radio" name = "question22" value = "3" > C 
+<input type = "radio" name = "question22" value = "4" > D 
+<br></form>
+<h3> 第 12 題 </h3>
+<span>A 不喜歡和別人爭論, B 不能照預定的計畫表行事, C 一位鎮靜而不易激動的人, D 非常喜好社交活動</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question23" value = "1" > A 
+<input type = "radio" name = "question23" value = "2" > B 
+<input type = "radio" name = "question23" value = "3" > C 
+<input type = "radio" name = "question23" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question24" value = "1" > A 
+<input type = "radio" name = "question24" value = "2" > B 
+<input type = "radio" name = "question24" value = "3" > C 
+<input type = "radio" name = "question24" value = "4" > D 
+<br></form>
+<h3> 第 13 題 </h3>
+<span>A 不會煩惱或憂慮, B 缺乏責任感, C 對認識各種人不感興趣, D 善於管理他人</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question25" value = "1" > A 
+<input type = "radio" name = "question25" value = "2" > B 
+<input type = "radio" name = "question25" value = "3" > C 
+<input type = "radio" name = "question25" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question26" value = "1" > A 
+<input type = "radio" name = "question26" value = "2" > B 
+<input type = "radio" name = "question26" value = "3" > C 
+<input type = "radio" name = "question26" value = "4" > D 
+<br></form>
+<h3> 第 14 題 </h3>
+<span>A 容易和別人友善相處, B 在團體活動中，寧願讓別人領導, C 似有一種容易憂慮的本性, D 能不顧任何困難終於一項任務</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question27" value = "1" > A 
+<input type = "radio" name = "question27" value = "2" > B 
+<input type = "radio" name = "question27" value = "3" > C 
+<input type = "radio" name = "question27" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question28" value = "1" > A 
+<input type = "radio" name = "question28" value = "2" > B 
+<input type = "radio" name = "question28" value = "3" > C 
+<input type = "radio" name = "question28" value = "4" > D 
+<br></form>
+<h3> 第 15 題 </h3>
+<span>A 能左右他人的意見, B 缺乏參加團體活動的興趣, C 一位相當神經質的人, D 對所擔任的工作，能堅持到底</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question29" value = "1" > A 
+<input type = "radio" name = "question29" value = "2" > B 
+<input type = "radio" name = "question29" value = "3" > C 
+<input type = "radio" name = "question29" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question30" value = "1" > A 
+<input type = "radio" name = "question30" value = "2" > B 
+<input type = "radio" name = "question30" value = "3" > C 
+<input type = "radio" name = "question30" value = "4" > D 
+<br></form>
+<h3> 第 16 題 </h3>
+<span>A 態度鎮定而悠閒, B 不能堅守手邊的工作, C 喜歡周圍有許多人, D 對自己能力不太有信心</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question31" value = "1" > A 
+<input type = "radio" name = "question31" value = "2" > B 
+<input type = "radio" name = "question31" value = "3" > C 
+<input type = "radio" name = "question31" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question32" value = "1" > A 
+<input type = "radio" name = "question32" value = "2" > B 
+<input type = "radio" name = "question32" value = "3" > C 
+<input type = "radio" name = "question32" value = "4" > D 
+<br></form>
+<h3> 第 17 題 </h3>
+<span>A 可以讓人充分信賴, B 不關心身邊多數人的情況, C 覺得很難放鬆心情, D 在團體討論中擔負積極角色</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question33" value = "1" > A 
+<input type = "radio" name = "question33" value = "2" > B 
+<input type = "radio" name = "question33" value = "3" > C 
+<input type = "radio" name = "question33" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question34" value = "1" > A 
+<input type = "radio" name = "question34" value = "2" > B 
+<input type = "radio" name = "question34" value = "3" > C 
+<input type = "radio" name = "question34" value = "4" > D 
+<br></form>
+<h3> 第 18 題 </h3>
+<span>A 對一個問題，不輕易的放棄, B 顯得有點緊張的樣子, C 缺乏自信, D 喜歡和其他伙伴消磨時間</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question35" value = "1" > A 
+<input type = "radio" name = "question35" value = "2" > B 
+<input type = "radio" name = "question35" value = "3" > C 
+<input type = "radio" name = "question35" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question36" value = "1" > A 
+<input type = "radio" name = "question36" value = "2" > B 
+<input type = "radio" name = "question36" value = "3" > C 
+<input type = "radio" name = "question36" value = "4" > D 
+<br></form>
+<h3> 第 19 題 </h3>
+<span>A 一位很有創意的思考者, B 一位有點遲鈍而懶散的人, C 喜歡批評別人, D 做決定總覺經過多方考慮</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question37" value = "1" > A 
+<input type = "radio" name = "question37" value = "2" > B 
+<input type = "radio" name = "question37" value = "3" > C 
+<input type = "radio" name = "question37" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question38" value = "1" > A 
+<input type = "radio" name = "question38" value = "2" > B 
+<input type = "radio" name = "question38" value = "3" > C 
+<input type = "radio" name = "question38" value = "4" > D 
+<br></form>
+<h3> 第 20 題 </h3>
+<span>A 相信每個人在本質上是誠實的, B 在工作或娛樂時喜歡輕鬆以赴, C 具有很愛追根究柢的態度, D 做事很容易衝動</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question39" value = "1" > A 
+<input type = "radio" name = "question39" value = "2" > B 
+<input type = "radio" name = "question39" value = "3" > C 
+<input type = "radio" name = "question39" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question40" value = "1" > A 
+<input type = "radio" name = "question40" value = "2" > B 
+<input type = "radio" name = "question40" value = "3" > C 
+<input type = "radio" name = "question40" value = "4" > D 
+<br></form>
+<h3> 第 21 題 </h3>
+<span>A 一位精力很充沛的人, B 不太會跟人發脾氣, C 不喜歡研究複雜而困難的問題, D 較喜歡熱鬧而輕鬆的聚會</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question41" value = "1" > A 
+<input type = "radio" name = "question41" value = "2" > B 
+<input type = "radio" name = "question41" value = "3" > C 
+<input type = "radio" name = "question41" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question42" value = "1" > A 
+<input type = "radio" name = "question42" value = "2" > B 
+<input type = "radio" name = "question42" value = "3" > C 
+<input type = "radio" name = "question42" value = "4" > D 
+<br></form>
+<h3> 第 22 題 </h3>
+<span>A 喜歡討論各種想法, B 有點容易對從事的事物厭倦, C 經常三思而後行, D 不大信任別人</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question43" value = "1" > A 
+<input type = "radio" name = "question43" value = "2" > B 
+<input type = "radio" name = "question43" value = "3" > C 
+<input type = "radio" name = "question43" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question44" value = "1" > A 
+<input type = "radio" name = "question44" value = "2" > B 
+<input type = "radio" name = "question44" value = "3" > C 
+<input type = "radio" name = "question44" value = "4" > D 
+<br></form>
+<h3> 第 23 題 </h3>
+<span>A 喜歡主要具有構想的工作, B 做事的步調比較緩慢, C 每當要做決定總是很謹慎, D 覺得很多人不易相處</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question45" value = "1" > A 
+<input type = "radio" name = "question45" value = "2" > B 
+<input type = "radio" name = "question45" value = "3" > C 
+<input type = "radio" name = "question45" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question46" value = "1" > A 
+<input type = "radio" name = "question46" value = "2" > B 
+<input type = "radio" name = "question46" value = "3" > C 
+<input type = "radio" name = "question46" value = "4" > D 
+<br></form>
+<h3> 第 24 題 </h3>
+<span>A 喜歡投機或冒風險, B 很容易被人激怒, C 在短時間內能做完很多事情, D 花費很多時間思考新點子</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question47" value = "1" > A 
+<input type = "radio" name = "question47" value = "2" > B 
+<input type = "radio" name = "question47" value = "3" > C 
+<input type = "radio" name = "question47" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question48" value = "1" > A 
+<input type = "radio" name = "question48" value = "2" > B 
+<input type = "radio" name = "question48" value = "3" > C 
+<input type = "radio" name = "question48" value = "4" > D 
+<br></form>
+<h3> 第 25 題 </h3>
+<span>A 一位很有耐性的人, B 喜歡找刺激和快感, C 能長時間不停的工作, D 寧願執行計畫而不願研擬計畫</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question49" value = "1" > A 
+<input type = "radio" name = "question49" value = "2" > B 
+<input type = "radio" name = "question49" value = "3" > C 
+<input type = "radio" name = "question49" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question50" value = "1" > A 
+<input type = "radio" name = "question50" value = "2" > B 
+<input type = "radio" name = "question50" value = "3" > C 
+<input type = "radio" name = "question50" value = "4" > D 
+<br></form>
+<h3> 第 26 題 </h3>
+<span>A 一天終了總覺得很疲倦, B 常做匆促或草率的判斷, C 不怨恨別人, D 有強烈的求知慾</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question51" value = "1" > A 
+<input type = "radio" name = "question51" value = "2" > B 
+<input type = "radio" name = "question51" value = "3" > C 
+<input type = "radio" name = "question51" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question52" value = "1" > A 
+<input type = "radio" name = "question52" value = "2" > B 
+<input type = "radio" name = "question52" value = "3" > C 
+<input type = "radio" name = "question52" value = "4" > D 
+<br></form>
+<h3> 第 27 題 </h3>
+<span>A 不會因一時衝動而行事, B 因別人的錯誤而動怒, C 沒有興趣去做批判性思考, D 寧願迅速地工作</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question53" value = "1" > A 
+<input type = "radio" name = "question53" value = "2" > B 
+<input type = "radio" name = "question53" value = "3" > C 
+<input type = "radio" name = "question53" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question54" value = "1" > A 
+<input type = "radio" name = "question54" value = "2" > B 
+<input type = "radio" name = "question54" value = "3" > C 
+<input type = "radio" name = "question54" value = "4" > D 
+<br></form>
+<h3> 第 28 題 </h3>
+<span>A 常因別人而變得很苦惱, B 喜歡整天忙個不停, C 寧願不投機或冒風險, D 寧願做不太需要原創思考的工作</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question55" value = "1" > A 
+<input type = "radio" name = "question55" value = "2" > B 
+<input type = "radio" name = "question55" value = "3" > C 
+<input type = "radio" name = "question55" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question56" value = "1" > A 
+<input type = "radio" name = "question56" value = "2" > B 
+<input type = "radio" name = "question56" value = "3" > C 
+<input type = "radio" name = "question56" value = "4" > D 
+<br></form>
+<h3> 第 29 題 </h3>
+<span>A 一位小心謹慎的人, B 比較喜歡慢慢地工作, C 很圓滑而又有外交手腕, D 寧願不做深奧的思考</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question57" value = "1" > A 
+<input type = "radio" name = "question57" value = "2" > B 
+<input type = "radio" name = "question57" value = "3" > C 
+<input type = "radio" name = "question57" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question58" value = "1" > A 
+<input type = "radio" name = "question58" value = "2" > B 
+<input type = "radio" name = "question58" value = "3" > C 
+<input type = "radio" name = "question58" value = "4" > D 
+<br></form>
+<h3> 第 30 題 </h3>
+<span>A 對人容易失去耐心, B 比大多數人略少些持久力, C 容易表現獨創性特質, D 不太喜歡興奮刺激的事</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question59" value = "1" > A 
+<input type = "radio" name = "question59" value = "2" > B 
+<input type = "radio" name = "question59" value = "3" > C 
+<input type = "radio" name = "question59" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question60" value = "1" > A 
+<input type = "radio" name = "question60" value = "2" > B 
+<input type = "radio" name = "question60" value = "3" > C 
+<input type = "radio" name = "question60" value = "4" > D 
+<br></form>
+<h3> 第 31 題 </h3>
+<span>A 易於憑預感行事, B 具有旺盛的精力和驅策力, C 除非有事實證明，不輕信別人, D 喜歡富有思考性的問題</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question61" value = "1" > A 
+<input type = "radio" name = "question61" value = "2" > B 
+<input type = "radio" name = "question61" value = "3" > C 
+<input type = "radio" name = "question61" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question62" value = "1" > A 
+<input type = "radio" name = "question62" value = "2" > B 
+<input type = "radio" name = "question62" value = "3" > C 
+<input type = "radio" name = "question62" value = "4" > D 
+<br></form>
+<h3> 第 32 題 </h3>
+<span>A 不喜歡以快步調地工作, B 對別人深具信心, C 行事易流於一廂情願, D 喜歡解決複雜的問題</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question63" value = "1" > A 
+<input type = "radio" name = "question63" value = "2" > B 
+<input type = "radio" name = "question63" value = "3" > C 
+<input type = "radio" name = "question63" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question64" value = "1" > A 
+<input type = "radio" name = "question64" value = "2" > B 
+<input type = "radio" name = "question64" value = "3" > C 
+<input type = "radio" name = "question64" value = "4" > D 
+<br></form>
+<h3> 第 33 題 </h3>
+<span>A 一位精力充沛的工作者, B 欣然接受別人的批評, C 不喜歡含有大量推理的問題, D 喜歡先行動而後思考</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question65" value = "1" > A 
+<input type = "radio" name = "question65" value = "2" > B 
+<input type = "radio" name = "question65" value = "3" > C 
+<input type = "radio" name = "question65" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question66" value = "1" > A 
+<input type = "radio" name = "question66" value = "2" > B 
+<input type = "radio" name = "question66" value = "3" > C 
+<input type = "radio" name = "question66" value = "4" > D 
+<br></form>
+<h3> 第 34 題 </h3>
+<span>A 只談論別人的長處, B 行動之前非常謹慎, C 對需要動腦筋思考的討論不感興趣, D 不會趕著到處辦事</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question67" value = "1" > A 
+<input type = "radio" name = "question67" value = "2" > B 
+<input type = "radio" name = "question67" value = "3" > C 
+<input type = "radio" name = "question67" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question68" value = "1" > A 
+<input type = "radio" name = "question68" value = "2" > B 
+<input type = "radio" name = "question68" value = "3" > C 
+<input type = "radio" name = "question68" value = "4" > D 
+<br></form>
+<h3> 第 35 題 </h3>
+<span>A 沒有尋根究底的精神, B 不會憑一時衝動行事, C 經常充滿活力, D 由於別人的缺點而發怒</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question69" value = "1" > A 
+<input type = "radio" name = "question69" value = "2" > B 
+<input type = "radio" name = "question69" value = "3" > C 
+<input type = "radio" name = "question69" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question70" value = "1" > A 
+<input type = "radio" name = "question70" value = "2" > B 
+<input type = "radio" name = "question70" value = "3" > C 
+<input type = "radio" name = "question70" value = "4" > D 
+<br></form>
+<h3> 第 36 題 </h3>
+<span>A 能比別人做更多的事, B 只為找刺激而去碰運氣, C 當受到批評時會動怒, D 寧願做勞心的工作</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question71" value = "1" > A 
+<input type = "radio" name = "question71" value = "2" > B 
+<input type = "radio" name = "question71" value = "3" > C 
+<input type = "radio" name = "question71" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question72" value = "1" > A 
+<input type = "radio" name = "question72" value = "2" > B 
+<input type = "radio" name = "question72" value = "3" > C 
+<input type = "radio" name = "question72" value = "4" > D 
+<br></form>
+<h3> 第 37 題 </h3>
+<span>A 非常相信別人, B 比較喜歡例行和簡單的工作, C 憑著一時的衝動而行事, D 有充沛的精力和活力</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question73" value = "1" > A 
+<input type = "radio" name = "question73" value = "2" > B 
+<input type = "radio" name = "question73" value = "3" > C 
+<input type = "radio" name = "question73" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question74" value = "1" > A 
+<input type = "radio" name = "question74" value = "2" > B 
+<input type = "radio" name = "question74" value = "3" > C 
+<input type = "radio" name = "question74" value = "4" > D 
+<br></form>
+<h3> 第 38 題 </h3>
+<span>A 常常突然做決定, B 對每個人都有好感, C 在工作或娛樂時都保持快活的步調, D 對於求知缺乏濃厚的興趣</span>
+<form class="radio_btn"><br><br>最像:
+<input type = "radio" name = "question75" value = "1" > A 
+<input type = "radio" name = "question75" value = "2" > B 
+<input type = "radio" name = "question75" value = "3" > C 
+<input type = "radio" name = "question75" value = "4" > D 
+<br></form>
+<form class="radio_btn"><br>最不像:
+<input type = "radio" name = "question76" value = "1" > A 
+<input type = "radio" name = "question76" value = "2" > B 
+<input type = "radio" name = "question76" value = "3" > C 
+<input type = "radio" name = "question76" value = "4" > D 
+<br></form>
+
+
+
+    <br>
+    <br>
+</div>
+<div id="next" class="fix_button">
+    <button type="button">我已填寫完畢，去填量表 > </button>
+</div>
+<script>
+function check2(){
+        var list = [];
+        for(var i=1;i<=76;i++){
+            if($('input[name=question'+i+']:checked').val() == undefined)
+                list.push(i);
+        }
+        if(list.length == 0)
+            return 0;
+        else
+            return list;
+    }
+$(document).ready(function() {
+    var url = new URL(location.href);
+    var number = url.searchParams.get('num');
+    $("#next").click(function(){
+        var num = check2();
+        if(num != 0){
+            var str = "";
+            for(var i in num)
+                str += num[i] + ",";
+            alert("問題 " + str + " 沒填");
+        }
+        else{
+            var str = "";
+            for(var i=1;i<=75;i++){
+                str += $('input[name=question'+i+']:checked').val() + "_";
+            }
+            str += $('input[name=question'+i+']:checked').val();
+            str = "num=" + number + "&include=" + str;
+            jumpto("memory.html?mode=load&page=8&"+str,window);
+        }
+    });
+});
+</script>
+</body>
+</html>

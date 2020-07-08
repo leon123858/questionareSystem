@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="func.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+	<link rel="manifest" href="manifest.webmanifest">
+	<script src="index.js" defer></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>桌球運動員精準計畫</h1>
+</div>
+<br>
+<div class="book" style="line-height:normal">
+    <h2 >運動意象能力量表</h2>
+    <h2>一、技巧意象</h2>
+<form class="radio_btn">
+1. 我想像自己能修正發球技術上的缺點。
+<br>
+<input type = "radio" name = "question1" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question1" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question1" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question1" value = "4" > 4 同意<br>
+<input type = "radio" name = "question1" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+2. 我想像自己修正發球動作的技巧。
+<br>
+<input type = "radio" name = "question2" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question2" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question2" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question2" value = "4" > 4 同意<br>
+<input type = "radio" name = "question2" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+3. 我想像成功地執行發球技巧。
+<br>
+<input type = "radio" name = "question3" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question3" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question3" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question3" value = "4" > 4 同意<br>
+<input type = "radio" name = "question3" value = "5" > 5 非常同意<br>
+<br></form>
+<h2>二、策略意象</h2>
+<form class="radio_btn">
+4. 我在腦中想像發球的戰術。
+<br>
+<input type = "radio" name = "question4" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question4" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question4" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question4" value = "4" > 4 同意<br>
+<input type = "radio" name = "question4" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+5. 為了預防戰而失效，我可以想像替代的策略。
+<br>
+<input type = "radio" name = "question5" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question5" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question5" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question5" value = "4" > 4 同意<br>
+<input type = "radio" name = "question5" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+6. 我想像擬定未來的比賽計畫。
+<br>
+<input type = "radio" name = "question6" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question6" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question6" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question6" value = "4" > 4 同意<br>
+<input type = "radio" name = "question6" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+ 7. 我想像比賽計畫的每個細節（例如進攻與守、快慢節奏等）。
+<br>
+<input type = "radio" name = "question7" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question7" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question7" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question7" value = "4" > 4 同意<br>
+<input type = "radio" name = "question7" value = "5" > 5 非常同意<br>
+<br></form>
+<h2>三、目標意象</h2>
+<form class="radio_btn">
+8. 我想像自己赢得一面獎牌。
+<br>
+<input type = "radio" name = "question8" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question8" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question8" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question8" value = "4" > 4 同意<br>
+<input type = "radio" name = "question8" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+ 9. 我想像自己上臺領獎。
+<br>
+<input type = "radio" name = "question9" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question9" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question9" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question9" value = "4" > 4 同意<br>
+<input type = "radio" name = "question9" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+10. 我想像在比賽中贏得勝利。
+<br>
+<input type = "radio" name = "question10" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question10" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question10" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question10" value = "4" > 4 同意<br>
+<input type = "radio" name = "question10" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+11. 我想像其他運動員因為我的好表現而鼓勵我。
+<br>
+<input type = "radio" name = "question11" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question11" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question11" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question11" value = "4" > 4 同意<br>
+<input type = "radio" name = "question11" value = "5" > 5 非常同意<br>
+<br></form>
+<h2>四、情緒意象</h2>
+<form class="radio_btn">
+12. 我想像從事自己擅長的運動時，會產生正面的情緒。
+<br>
+<input type = "radio" name = "question12" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question12" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question12" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question12" value = "4" > 4 同意<br>
+<input type = "radio" name = "question12" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+13. 我想像從事擅長的運動時，會感覺到期待與興奮。
+<br>
+<input type = "radio" name = "question13" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question13" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question13" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question13" value = "4" > 4 同意<br>
+<input type = "radio" name = "question13" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+14. 我想像在運動表現時感覺到興奮。
+<br>
+<input type = "radio" name = "question14" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question14" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question14" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question14" value = "4" > 4 同意<br>
+<input type = "radio" name = "question14" value = "5" > 5 非常同意<br>
+<br></form>
+<h2>五、精熟意象</h2>
+<form class="radio_btn">
+15. 我想像即使比賽進行得不順利，仍舊付出 100%的努力。
+<br>
+<input type = "radio" name = "question15" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question15" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question15" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question15" value = "4" > 4 同意<br>
+<input type = "radio" name = "question15" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+16. 我想像自己在遭遇挫折後，依然能保持正面態度。
+<br>
+<input type = "radio" name = "question16" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question16" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question16" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question16" value = "4" > 4 同意<br>
+<input type = "radio" name = "question16" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+17. 我想像在艱難的情境中保持自信。
+<br>
+<input type = "radio" name = "question17" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question17" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question17" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question17" value = "4" > 4 同意<br>
+<input type = "radio" name = "question17" value = "5" > 5 非常同意<br>
+<br></form>
+<form class="radio_btn">
+18. 我想像自己是堅強的。
+<br>
+<input type = "radio" name = "question18" value = "1" > 1 非常不同意<br>
+<input type = "radio" name = "question18" value = "2" > 2 不同意<br>
+<input type = "radio" name = "question18" value = "3" > 3 無意見<br>
+<input type = "radio" name = "question18" value = "4" > 4 同意<br>
+<input type = "radio" name = "question18" value = "5" > 5 非常同意<br>
+<br></form>
+
+    <br>
+    <br>
+</div>
+<div id="next" class="fix_button">
+    <button type="button">我已填寫完畢，去填量表 > </button>
+</div>
+<script>
+function check2(){
+        var list = [];
+        for(var i=1;i<=18;i++){
+            if($('input[name=question'+i+']:checked').val() == undefined)
+                list.push(i);
+        }
+        if(list.length == 0)
+            return 0;
+        else
+            return list;
+    }
+$(document).ready(function() {
+    var url = new URL(location.href);
+    var number = url.searchParams.get('num');
+    $("#next").click(function(){
+        var num = check2();
+        if(num != 0){
+            var str = "";
+            for(var i in num)
+                str += num[i] + ",";
+            alert("問題 " + str + " 沒填");
+        }
+        else{
+            var str = "";
+            for(var i=1;i<=17;i++){
+                str += $('input[name=question'+i+']:checked').val() + "_";
+            }
+            str += $('input[name=question'+i+']:checked').val();
+            str = "num=" + number + "&include=" + str;
+            jumpto("memory.html?mode=load&page=4&"+str,window);
+        }
+    });
+});
+</script>
+</body>
+</html>

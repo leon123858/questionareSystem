@@ -40,6 +40,40 @@
     <br>
     <span class="person_data" >8.體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="q8" class="in_text" placeholder="ex:70" onkeyup="if(isNaN(value))execCommand('undo')">
     <br>
+    <span class="person_data" >9.電話 :</span>&#160&#160&#160&#160<input type="text" name="q9" class="in_text" placeholder="ex:0977777777" >
+    <br>
+    <span class="person_data" >10.聯絡地址 :</span>&#160&#160&#160&#160<input type="text" name="q10" class="in_text" placeholder="null" >
+    <br>
+    <span class="person_data" >11.常用Email :</span>&#160&#160&#160&#160<input type="text" name="q11" class="in_text" placeholder="ex:aa@xxx" >
+    <br>
+    <span class="person_data" >12.就讀學校 :</span>&#160&#160&#160&#160<input type="text" name="q12" class="in_text" placeholder="ex:XXXX" >
+    <br>
+    <span class="person_data" >13.系級 :</span>&#160&#160&#160&#160<input type="text" name="q13" class="in_text" placeholder="ex:XXXXX" >
+    <br>
+    <span class="person_data" >14.球齡 :</span>&#160&#160&#160&#160<input type="text" name="q14" class="in_text" placeholder="ex:20" >
+    <br>
+    <span class="person_data" >15.近兩年最佳成績表現 :</span>&#160&#160&#160&#160<input type="text" name="q15" class="in_text" placeholder="ex:null" >
+    <br>
+    <span class="person_data" >16.平時慣用手 :</span>
+    <form class="radio_btn" >
+        <input type="radio" name="q16" value="1" checked> 左
+        <input type="radio" name="q16" value="0"> 右
+    </form>
+    <br>
+    <span class="person_data" >17.打球慣用手 :</span>
+    <form class="radio_btn" >
+        <input type="radio" name="q17" value="1" checked> 左
+        <input type="radio" name="q17" value="0"> 右
+    </form>
+    <br>
+    <span class="person_data" >18.教練 :</span>&#160&#160&#160&#160<input type="text" name="q18" class="in_text" placeholder="ex:XXX" >
+    <br>
+    <span class="person_data" >19.一對一練習時數 :</span>&#160&#160&#160&#160<input type="text" name="q19" class="in_text" placeholder="ex:12" >
+    <br>
+    <span class="person_data" >20.團練時數 :</span>&#160&#160&#160&#160<input type="text" name="q20" class="in_text" placeholder="ex:12" >
+    <br>
+    <br>
+    <br>
     <br>
 </div>
 <div id="next" class="fix_button">
@@ -49,7 +83,7 @@
 
 $(document).ready(function() {
     $("#next").click(function(){
-        var num = check(window.document,8);
+        var num = check(window.document,20);
         if(num != 0){
             var str = "";
             for(var i in num)
@@ -58,14 +92,14 @@ $(document).ready(function() {
         }
         else{
             var str = "";
-            for(var i=1;i<=8;i++){
-                if(i == 3){
-                    str += $('input[name=q3]:checked').val() + "_";
+            for(var i=1;i<=20;i++){
+                if(i == 3 || i== 16 || i ==17){
+                    str += $('input[name=q'+i+']:checked').val() + "_";
                 }
-                else if(i == 8){
+                else if(i == 20){
                     str += window.document.getElementsByName("q" + i)[0].value;
                 }
-                else if(i == 2){
+                else if(i == 2 || i==10 || i== 12 || i ==13 || i==15 || i==18){
                     str += encodeURI(window.document.getElementsByName("q" + i)[0].value) + "_";
                 }
                 else{

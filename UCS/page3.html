@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="func.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+	<link rel="manifest" href="manifest.webmanifest">
+	<script src="index.js" defer></script>
+    <style type="text/css">
+        @import "style.css"
+    </style>
+    <title>問卷系統</title>
+</head>
+<body>
+<div class="fix_title">
+    <h1>桌球運動員精準計畫</h1>
+</div>
+<br>
+<div class="book" style="line-height:normal">
+    <h2 >競賽狀態焦慮量表</h2>
+<form class="radio_btn">
+1. 我感到輕鬆自在。
+<br>
+<input type = "radio" name = "question1" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question1" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question1" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question1" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+2. 我覺得神經過敏。
+<br>
+<input type = "radio" name = "question2" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question2" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question2" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question2" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+3. 我感到舒適。
+<br>
+<input type = "radio" name = "question3" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question3" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question3" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question3" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+4. 我擔心自己無法在比賽中發揮應有的實力。
+<br>
+<input type = "radio" name = "question4" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question4" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question4" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question4" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+5. 我覺得有自信。
+<br>
+<input type = "radio" name = "question5" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question5" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question5" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question5" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+6. 我擔心輸掉比賽。
+<br>
+<input type = "radio" name = "question6" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question6" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question6" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question6" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+7．我覺得胃部緊縮。
+<br>
+<input type = "radio" name = "question7" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question7" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question7" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question7" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+8．我感到安心。 
+<br>
+<input type = "radio" name = "question8" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question8" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question8" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question8" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+9．我有信心克服挑戰。
+<br>
+<input type = "radio" name = "question9" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question9" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question9" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question9" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+10. 我擔心表現不佳。
+<br>
+<input type = "radio" name = "question10" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question10" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question10" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question10" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+11. 我心跳急速。
+<br>
+<input type = "radio" name = "question11" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question11" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question11" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question11" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+12. 我有信心表現良好。
+<br>
+<input type = "radio" name = "question12" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question12" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question12" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question12" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+13. 我擔心是否能達成自己的目標。
+<br>
+<input type = "radio" name = "question13" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question13" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question13" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question13" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+14. 我感到胃下垂。
+<br>
+<input type = "radio" name = "question14" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question14" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question14" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question14" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+15. 我心情覺得輕鬆。
+<br>
+<input type = "radio" name = "question15" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question15" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question15" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question15" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+16. 我擔心其他人對我的表現感到失望。
+<br>
+<input type = "radio" name = "question16" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question16" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question16" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question16" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+17．我的手心出汗。
+<br>
+<input type = "radio" name = "question17" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question17" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question17" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question17" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+18．我有自信，因為我預計能達到自己的目標。
+<br>
+<input type = "radio" name = "question18" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question18" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question18" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question18" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+19．我擔心自己無法專注比賽。
+<br>
+<input type = "radio" name = "question19" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question19" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question19" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question19" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+20. 我感到全身緊繃。
+<br>
+<input type = "radio" name = "question20" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question20" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question20" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question20" value = "4" > 4 幾乎都是 <br>
+<br></form>
+<form class="radio_btn">
+21．我有信心突破壓力。 
+<br>
+<input type = "radio" name = "question21" value = "1" > 1 幾乎沒有 <br>
+<input type = "radio" name = "question21" value = "2" > 2 偶爾有 <br>
+<input type = "radio" name = "question21" value = "3" > 3 常常 <br>
+<input type = "radio" name = "question21" value = "4" > 4 幾乎都是 <br>
+<br></form>
+
+    <br>
+    <br>
+</div>
+<div id="next" class="fix_button">
+    <button type="button">我已填寫完畢，去填量表 > </button>
+</div>
+<script>
+function check2(){
+        var list = [];
+        for(var i=1;i<=21;i++){
+            if($('input[name=question'+i+']:checked').val() == undefined)
+                list.push(i);
+        }
+        if(list.length == 0)
+            return 0;
+        else
+            return list;
+    }
+$(document).ready(function() {
+    var url = new URL(location.href);
+    var number = url.searchParams.get('num');
+    $("#next").click(function(){
+        var num = check2();
+        if(num != 0){
+            var str = "";
+            for(var i in num)
+                str += num[i] + ",";
+            alert("問題 " + str + " 沒填");
+        }
+        else{
+            var str = "";
+            for(var i=1;i<=20;i++){
+                str += $('input[name=question'+i+']:checked').val() + "_";
+            }
+            str += $('input[name=question'+i+']:checked').val();
+            str = "num=" + number + "&include=" + str;
+            jumpto("memory.html?mode=load&page=3&"+str,window);
+        }
+    });
+});
+</script>
+</body>
+</html>
