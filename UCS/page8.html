@@ -580,8 +580,10 @@ $(document).ready(function() {
         var num = check2();
         if(num != 0){
             var str = "";
-            for(var i in num)
-                str += num[i] + ",";
+            for(var i in num){
+                    str += String(Math.ceil(parseInt(num[i])/2)) + " ,";
+            }
+                str += String(Math.ceil(parseInt(num[i])/2)) + ",";
             alert("問題 " + str + " 沒填");
         }
         else{
