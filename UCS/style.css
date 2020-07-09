@@ -23,9 +23,77 @@
   }*/
 
 /*start*/
+@media (min-width: 200px) {
+    .fix_title{
+    background-color: #0D31F7;
+    text-align: center;
+    color: white;
+    font-family: Microsoft JhengHei;
+    font-size: 150%;
+    line-height: 50px;
+    position:fixed;
+    width: 100%;
+    }
 
+    .book{
+    margin-top: 28%;
+    font-family: Microsoft JhengHei;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 100%;
+    font-size: 150%;
+    }
+    .fix_button{
+    background-color: #0D31F7;
+    text-align: center;
+    width: 100%;
+    position:fixed;
+    bottom:0;
+    z-index:0;
+    font-size: 130%;
+    line-height: 50px;
+    }
 
-.fix_title{
+    .person_data{
+    font-family: Microsoft JhengHei;
+    font-size: 120%;
+    }
+
+    .in_text{
+    border:3px; 
+    border-bottom-style: solid;
+    border-top-style: none;
+    border-left-style:none;
+    border-right-style:none;
+    font-size: 120%;
+    }
+
+    .radio_btn{
+    margin:0px; 
+    display:inline;
+    font-size: 120%;
+    }
+
+    .input_btn{
+    border:0;
+    color: black;
+    font-family: Microsoft JhengHei;
+    background-color: #DBDBDB;
+    width:70%;
+    font-size: 180%;
+    }
+
+    button{
+    border:0;
+    color: white;
+    font-family: Microsoft JhengHei;
+    background-color: #0D31F7;
+    width:100%;
+    font-size: 180%;
+    }
+}
+@media (min-width: 600px) {
+    .fix_title{
     background-color: #0D31F7;
     text-align: center;
     color: white;
@@ -33,58 +101,60 @@
     line-height: 5px;
     position:fixed;
     width: 100%;
-}
+    }
 
-.book{
+    .book{
     margin-top: 8%;
     font-family: Microsoft JhengHei;
     margin-left: 5%;
     margin-right: 5%;
     line-height: 350%;
-}
-.fix_button{
+    }
+    .fix_button{
     background-color: #0D31F7;
     text-align: center;
     width: 100%;
     position:fixed;
     bottom:0;
     z-index:0;
-}
+    }
 
-.person_data{
+    .person_data{
     font-family: Microsoft JhengHei;
     font-size: 120%;
-}
+    }
 
-.in_text{
+    .in_text{
     border:3px; 
     border-bottom-style: solid;
     border-top-style: none;
     border-left-style:none;
     border-right-style:none;
     font-size: 120%;
-}
+    }
 
-.radio_btn{
+    .radio_btn{
     margin:0px; 
     display:inline;
     font-size: 120%;
-}
+    }
 
-.input_btn{
+    .input_btn{
     border:0;
     color: black;
     font-family: Microsoft JhengHei;
     background-color: #DBDBDB;
     width:70%;
     font-size: 180%;
-}
+    }
 
-button{
+    button{
     border:0;
     color: white;
     font-family: Microsoft JhengHei;
     background-color: #0D31F7;
     width:100%;
     font-size: 180%;
+    }
 }
+
