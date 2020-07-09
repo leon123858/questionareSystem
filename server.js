@@ -15,6 +15,27 @@ MongoClient.connect(uri, { useNewUrlParser: true }, function (err, db) {
     console.log("It's test end");
 });
 
+function insertperson(parameters) {
+    MongoClient.connect(uri, { useNewUrlParser: true }, function (err, db) {
+        if (err) throw err;
+        console.log("It's person add start");
+        if (parameters.length > 0 && parseInt(parameters[0]) > 0) {
+            var table = db.db("personq").collection(parameters[1]);
+            console.log(parameters[1]);
+            var obj = { qn: parameters[0] };
+            for (var i = 2; i < parameters.length; i++) {
+                obj[i - 1] = parameters[i];
+            }
+            obj['date'] = time;
+            table.insertOne(obj, function (err, red) { // insertMany 是插入多個用的
+                if (err) throw err;
+                console.log("It's person add end");
+                db.close();
+            });
+        }
+    });
+}
+
 http.createServer(function (req, res) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHeader(200, {
@@ -55,9 +76,9 @@ http.createServer(function (req, res) {
 					var json = JSON.stringify(obj);
 					res.end(json);
 					console.log("It's add end");
-					db.close();
+                    db.close();
+                    //insertperson(parameter);
 				});
-				
 			}
 			else{
 				obj.result = 'fail';
