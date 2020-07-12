@@ -20,9 +20,9 @@
 <br>
 <div class="book">
     <h2 style="text-align: center">基本資料填寫</h2>
-    <span class="person_data">1.編號:</span>&#160&#160&#160&#160<input type="text" name="q1" class="in_text" placeholder="ex:N1234" maxlength=5 onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
+    <span class="person_data">1.編號:</span>&#160&#160&#160&#160<input type="text" name="q1" class="in_text" placeholder="ex:S01" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
     <br>
-    <span class="person_data">2.姓名:</span>&#160&#160&#160&#160<input type="text" name="q2" class="in_text" placeholder="ex:王小明" onkeyup="value=value.replace(/[0-9]/,'')">
+    <span class="person_data">2.姓名:</span>&#160&#160&#160&#160<input type="text" name="q2" class="in_text" placeholder="ex:王小明" >
     <br>
     <span class="person_data">3.生理性別:</span>
     <form class="radio_btn" >
@@ -38,21 +38,21 @@
     <br>
     <span class="person_data" >7.身高 (cm) :</span>&#160&#160&#160&#160<input type="text" name="q7" class="in_text" placeholder="ex:168.9" onkeyup="if(isNaN(value))execCommand('undo')">
     <br>
-    <span class="person_data" >8.體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="q8" class="in_text" placeholder="ex:70" onkeyup="if(isNaN(value))execCommand('undo')">
+    <span class="person_data" >8.體重 (kg) :</span>&#160&#160&#160&#160<input type="text" name="q8" class="in_text" placeholder="ex:70.5" onkeyup="if(isNaN(value))execCommand('undo')">
     <br>
-    <span class="person_data" >9.電話 :</span>&#160&#160&#160&#160<input type="text" name="q9" class="in_text" placeholder="ex:0977777777" >
+    <span class="person_data" >9.電話 :</span>&#160&#160&#160&#160<input type="text" name="q9" class="in_text" placeholder="ex:0912345678"  onkeyup="this.value=this.value.replace(/\D/g,'')">
     <br>
-    <span class="person_data" >10.聯絡地址 :</span>&#160&#160&#160&#160<input type="text" name="q10" class="in_text" placeholder="null" >
+    <span class="person_data" >10.聯絡地址 :</span>&#160&#160&#160&#160<input type="text" name="q10" class="in_text" placeholder="" >
     <br>
-    <span class="person_data" >11.常用Email :</span>&#160&#160&#160&#160<input type="text" name="q11" class="in_text" placeholder="ex:aa@xxx" >
+    <span class="person_data" >11.常用Email :</span>&#160&#160&#160&#160<input type="text" name="q11" class="in_text" placeholder="ex:abcd@gmail.com">
     <br>
-    <span class="person_data" >12.就讀學校 :</span>&#160&#160&#160&#160<input type="text" name="q12" class="in_text" placeholder="ex:XXXX" >
+    <span class="person_data" >12.就讀學校 :</span>&#160&#160&#160&#160<input type="text" name="q12" class="in_text" placeholder="ex:國立成功大學" >
     <br>
-    <span class="person_data" >13.系級 :</span>&#160&#160&#160&#160<input type="text" name="q13" class="in_text" placeholder="ex:XXXXX" >
+    <span class="person_data" >13.系級 :</span>&#160&#160&#160&#160<input type="text" name="q13" class="in_text" placeholder="ex:心理三" onkeyup="value=value.replace(/[0-9]/,'')">
     <br>
-    <span class="person_data" >14.球齡 :</span>&#160&#160&#160&#160<input type="text" name="q14" class="in_text" placeholder="ex:20" >
+    <span class="person_data" >14.球齡 (年):</span>&#160&#160&#160&#160<input type="text" name="q14" class="in_text" placeholder="ex:10" onkeyup="this.value=this.value.replace(/\D/g,'')">
     <br>
-    <span class="person_data" >15.近兩年最佳成績表現 :</span>&#160&#160&#160&#160<input type="text" name="q15" class="in_text" placeholder="ex:null" >
+    <span class="person_data" >15.近兩年最佳成績表現 :</span>&#160&#160&#160&#160<input type="text" name="q15" class="in_text" placeholder="ex:107 全國大專盃女團第三" >
     <br>
     <span class="person_data" >16.平時慣用手 :</span>
     <form class="radio_btn" >
@@ -66,11 +66,11 @@
         <input type="radio" name="q17" value="0" id="r6"> <label for="r6">右</label>
     </form>
     <br>
-    <span class="person_data" >18.教練 :</span>&#160&#160&#160&#160<input type="text" name="q18" class="in_text" placeholder="ex:XXX" >
+    <span class="person_data" >18.教練 :</span>&#160&#160&#160&#160<input type="text" name="q18" class="in_text" placeholder="ex:張大強" >
     <br>
-    <span class="person_data" >19.一對一練習時數 :</span>&#160&#160&#160&#160<input type="text" name="q19" class="in_text" placeholder="ex:12" >
+    <span class="person_data" >19.一對一練習時數 :</span>&#160&#160&#160&#160<input type="text" name="q19" class="in_text" placeholder="ex:12" onkeyup="this.value=this.value.replace(/\D/g,'')">
     <br>
-    <span class="person_data" >20.團練時數 :</span>&#160&#160&#160&#160<input type="text" name="q20" class="in_text" placeholder="ex:12" >
+    <span class="person_data" >20.團練時數 :</span>&#160&#160&#160&#160<input type="text" name="q20" class="in_text" placeholder="ex:12" onkeyup="this.value=this.value.replace(/\D/g,'')">
     <br>
     <br>
     <br>
