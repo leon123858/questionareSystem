@@ -30,7 +30,7 @@ $(document).ready(function() {
     var number = url.searchParams.get('num');
     $("#demo").html(include);
     $("#next").click(function(){
-        jumpto("others.html?num=" + number,window);
+        jumpto("others.html?num=" + number+ "&digit=" + url.searchParams.get('digit'),window);
     });
 });
 </script>

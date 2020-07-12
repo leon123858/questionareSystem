@@ -156,7 +156,7 @@ $(document).ready(function() {
             }
             str += $('input[name=question'+i+']:checked').val();
             str = "num=" + number + "&include=" + str;
-            jumpto("memory.html?mode=load&page=6&"+str,window);
+            jumpto("memory.html?mode=load&page=6&"+str+ "&digit=" + url.searchParams.get('digit'),window);
         }
     });
 });

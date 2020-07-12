@@ -97,13 +97,13 @@ $(document).ready(function() {
         $.cookie(String(unup),include, { expires: 100, path: '/'});
         $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
         
-        jumpto("others.html?num=" + number,window);
+        jumpto("others.html?num=" + number+ "&digit=" + url.searchParams.get('digit'),window);
     }
     else if(mode == 'load'){
         var page = url.searchParams.get('page');
         $.cookie(String(unup),page+'_'+number+'_'+include, { expires: 100, path: '/'});
         $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
-        jumpto("show.html?num=" + number+"&page="+page+"&include="+include,window);
+        jumpto("show.html?num=" + number+"&page="+page+"&include="+include + "&digit=" + url.searchParams.get('digit'),window);
     }
     else if(mode == 'reload'){
         if(unup == 0){

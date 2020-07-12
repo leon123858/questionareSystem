@@ -1,6 +1,9 @@
 function jumpto(goal,win){
     win.location.replace(goal);
 }
+function jumpto(goal,win,str){
+    
+}
 function check(doc,n){
     var list = [];
     for(var i=1 ;i<=n;i++){
@@ -14,3 +17,6 @@ function check(doc,n){
         return 0;
 }
 
+function updigit(str,which){
+    return str[which-1] = 0;
+}

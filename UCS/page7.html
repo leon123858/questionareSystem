@@ -234,7 +234,7 @@ $(document).ready(function() {
             }
             str += $('input[name=question'+i+']:checked').val();
             str = "num=" + number + "&include=" + str;
-            jumpto("memory.html?mode=load&page=7&"+str,window);
+            jumpto("memory.html?mode=load&page=7&"+str+ "&digit=" + url.searchParams.get('digit'),window);
         }
     });
 });

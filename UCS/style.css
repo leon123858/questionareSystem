@@ -32,7 +32,8 @@
     font-size: 150%;
     line-height: 30px;
     position:fixed;
-    width: 100%;
+    width: 120%;
+    margin-top: -1%;
     }
 
     .book{
@@ -89,7 +90,7 @@
     color: white;
     font-family: Microsoft JhengHei;
     background-color: #0D31F7;
-    width:100%;
+    width:120%;
     height: 100px;
     font-size: 180%;
     }

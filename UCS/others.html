@@ -34,17 +34,25 @@
     <button type="button">我已填答完畢，回到主畫面 > </button>
 </div>
 <script>
+    function IsWrite(str){
+        for(var i=1;i<=str.length;i++){
+            if(str[i-1] == '1')
+                $("#qn" + i).css("text-decoration","line-through");
+        }
+    }
 $(document).ready(function() {
     var url = new URL(location.href);
     var number = url.searchParams.get('num');
-    $("#qn1").click(function(){jumpto("page1.html?num=" + number,window);});
-    $("#qn2").click(function(){jumpto("page2.html?num=" + number,window);});
-    $("#qn3").click(function(){jumpto("page3.html?num=" + number,window);});
-    $("#qn4").click(function(){jumpto("page4.html?num=" + number,window);});
-    $("#qn5").click(function(){jumpto("page5.html?num=" + number,window);});
-    $("#qn6").click(function(){jumpto("page6.html?num=" + number,window);});
-    $("#qn7").click(function(){jumpto("page7.html?num=" + number,window);});
-    $("#qn8").click(function(){jumpto("page8.html?num=" + number,window);});
+    var digit = url.searchParams.get('digit');
+    IsWrite(url.searchParams.get('digit'));
+    $("#qn1").click(function(){jumpto("page1.html?num=" + number + "&digit=" + updigit(digit,1),window);});
+    $("#qn2").click(function(){jumpto("page2.html?num=" + number+ "&digit=" + updigit(digit,2),window);});
+    $("#qn3").click(function(){jumpto("page3.html?num=" + number+ "&digit=" + updigit(digit,3),window);});
+    $("#qn4").click(function(){jumpto("page4.html?num=" + number+ "&digit=" + updigit(digit,4),window);});
+    $("#qn5").click(function(){jumpto("page5.html?num=" + number+ "&digit=" + updigit(digit,5),window);});
+    $("#qn6").click(function(){jumpto("page6.html?num=" + number+ "&digit=" + updigit(digit,6),window);});
+    $("#qn7").click(function(){jumpto("page7.html?num=" + number+ "&digit=" + updigit(digit,7),window);});
+    $("#qn8").click(function(){jumpto("page8.html?num=" + number+ "&digit=" + updigit(digit,8),window);});
     $("#back").click(function(){jumpto("memory.html?mode=reload",window);});
 });
 </script>
