@@ -1,0 +1,10 @@
+C:\Users\a0970\Desktop\build_quationary\build_quationary\bin\Debug\build_quationary.exe.config
+C:\Users\a0970\Desktop\build_quationary\build_quationary\bin\Debug\build_quationary.exe
+C:\Users\a0970\Desktop\build_quationary\build_quationary\bin\Debug\build_quationary.pdb
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.csprojAssemblyReference.cache
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.Form1.resources
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.Properties.Resources.resources
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.csproj.GenerateResource.cache
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.csproj.CoreCompileInputs.cache
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.exe
+C:\Users\a0970\Desktop\build_quationary\build_quationary\obj\Debug\build_quationary.pdb
