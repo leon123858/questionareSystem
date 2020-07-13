@@ -21,7 +21,7 @@
 <script>
     function upload(num,const_unup){
         $.ajax({
-　　　　　　'url':'//questionserver-282910.appspot.com/insert?'+ String($.cookie(String(num))),
+　　　　　　'url':'//questionserver-282910.appspot.com/insert?'+ localStorage.getItem(String(num)),
 　　　　　　'method':'GET',
 　　　　　　'data':{},
 　　　　　　'success':function(data){
@@ -39,7 +39,7 @@
           },
           'complete':function(xhr,status,error){
               if(num-1 < 0){
-                  $.cookie('unup',const_unup, { expires: 100, path: '/'});
+                  localStorage.setItem('unup',String(const_unup));
                   jumpto("page0.html",window);
               }
               else
@@ -49,7 +49,7 @@
     }
     function upload2(num,const_unup){
         $.ajax({
-　　　　　　'url':'//questionserver-282910.appspot.com/insert?'+ String($.cookie(String(num))),
+　　　　　　'url':'//questionserver-282910.appspot.com/insert?'+ localStorage.getItem(String(num)),
 　　　　　　'method':'GET',
 　　　　　　'data':{},
 　　　　　　'success':function(data){
@@ -67,7 +67,7 @@
           },
           'complete':function(xhr,status,error){
               if(num-1 < 0){
-                  $.cookie('unup',const_unup, { expires: 100, path: '/'});
+                  localStorage.setItem('unup',String(const_unup));
                   jumpto("confirm.html",window);
               }
               else
@@ -80,9 +80,9 @@ $(document).ready(function() {
     var mode = url.searchParams.get('mode');
     var include = url.searchParams.get('include');
     var number = url.searchParams.get('num');
-    if($.cookie('unup') == null)
-        $.cookie('unup','0', { expires: 100, path: '/'});
-    var unup = parseInt($.cookie('unup'));
+    if(localStorage.getItem('unup') == undefined)
+        localStorage.setItem('unup','0');
+    var unup = parseInt(localStorage.getItem('unup'));
     var const_unup = unup;
     if(mode == 'upload'){
         if(unup == 0){
@@ -94,15 +94,17 @@ $(document).ready(function() {
         }
     }
     else if(mode == 'load0'){
-        $.cookie(String(unup),include, { expires: 100, path: '/'});
-        $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
+        localStorage.setItem(String(unup),include);
+        localStorage.setItem('unup',String(unup+1));
         
         jumpto("others.html?num=" + number+ "&digit=" + url.searchParams.get('digit'),window);
     }
     else if(mode == 'load'){
         var page = url.searchParams.get('page');
-        $.cookie(String(unup),page+'_'+number+'_'+include, { expires: 100, path: '/'});
-        $.cookie('unup',String(unup+1), { expires: 100, path: '/'});
+        localStorage.setItem(String(unup),page+'_'+number+'_'+include);
+        localStorage.setItem('unup',String(unup+1));
+        //$.cookie(String(unup),page+'_'+number+'_'+include, { expires: 100, path: '/'});
+        //$.cookie('unup',String(unup+1), { expires: 100, path: '/'});
         jumpto("show.html?num=" + number+"&page="+page+"&include="+include + "&digit=" + url.searchParams.get('digit'),window);
     }
     else if(mode == 'reload'){
