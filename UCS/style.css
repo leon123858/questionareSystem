@@ -23,7 +23,7 @@
   }*/
 
 /*start*/
-@media (min-width: 100px) {
+@media (min-width: 0px) {
     .fix_title{
     background-color: #0D31F7;
     text-align: center;
@@ -99,7 +99,7 @@
         height: 20px;
     }
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
     .fix_title{
     background-color: #0D31F7;
     text-align: center;
