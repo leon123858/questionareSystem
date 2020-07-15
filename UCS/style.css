@@ -94,6 +94,10 @@
     height: 200px;
     font-size: 250%;
     }
+    input[type="radio"]{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (min-width: 700px) {
     .fix_title{
@@ -157,6 +161,7 @@
     font-family: Microsoft JhengHei;
     background-color: #0D31F7;
     width:100%;
+    height: 100%;
     font-size: 180%;
     }
 }
