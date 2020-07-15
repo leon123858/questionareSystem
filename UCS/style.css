@@ -57,7 +57,7 @@
 
     .person_data{
     font-family: Microsoft JhengHei;
-    font-size: 220%;
+    font-size: 50PX;
     line-height: 250%;
     }
 
@@ -67,7 +67,7 @@
     border-top-style: none;
     border-left-style:none;
     border-right-style:none;
-    font-size: 220%;
+    font-size: 50PX;
     }
 
     .radio_btn{
