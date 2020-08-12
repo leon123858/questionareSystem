@@ -8,6 +8,11 @@ var sd = require('silly-datetime');
 var uri = "mongodb://localhost:27017/";
 console.log(uri);
 
+/*var options = {
+	key: fs.readFileSync('./cert/chyingp-key.pem'), // 私钥
+    cert: fs.readFileSync('./cert/chyingp-cert.pem') // 证书 
+};*/
+
 MongoClient.connect(uri, { useNewUrlParser: true }, function (err, db) {
     if (err) throw err;
     console.log("It's test start");
@@ -82,7 +87,7 @@ function insertpersonall(parameters) {
     });
 }
 
-http.createServer(function (req, res) {
+http.createServer(/*options*/,function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.writeHeader(200, {
         'Content-Type': 'text/html;charset=utf-8'
