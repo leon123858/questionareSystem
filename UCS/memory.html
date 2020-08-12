@@ -19,10 +19,10 @@
 </div>
 
 <script>
-	var uri = 'http://140.116.183.176:8080/';
+	//var uri = 'http://140.116.183.176:8080/';
     function upload(num,const_unup){
         $.ajax({
-　　　　　　'url':uri + 'insert?'+ localStorage.getItem(String(num)),
+　　　　　　'url':'//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num)),
 　　　　　　'method':'GET',
 　　　　　　'data':{},
 　　　　　　'success':function(data){
@@ -50,7 +50,7 @@
     }
     function upload2(num,const_unup){
         $.ajax({
-　　　　　　'url': uri +'/insert?'+ localStorage.getItem(String(num)),
+　　　　　　'url': '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num)),
 　　　　　　'method':'GET',
 　　　　　　'data':{},
 　　　　　　'success':function(data){
