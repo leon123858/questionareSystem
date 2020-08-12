@@ -5,7 +5,7 @@ var sd = require('silly-datetime');
 
 // Read in keys and secrets. Using nconf use can set secrets via
 // environment variables, command-line arguments, or a keys.json file.
-var uri = "mongodb+srv://leon1234858:8ntscpal@cluster0.gyixj.gcp.mongodb.net/?retryWrites=true&w=majority";
+var uri = "mongodb://localhost:27017/";
 console.log(uri);
 
 MongoClient.connect(uri, { useNewUrlParser: true }, function (err, db) {
