@@ -49,7 +49,7 @@
     }
 	function upload2(num,const_unup)
     {
-		var theUrl =uri + '/insert?'+ localStorage.getItem(String(num));
+		var theUrl = uri + 'insert?'+ localStorage.getItem(String(num));
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
