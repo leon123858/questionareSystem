@@ -19,13 +19,15 @@
 </div>
 
 <script>
+    var uri = 'https://140.116.183.176:8080/';
 	function upload(num,const_unup)
     {
-		var theUrl = '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num));
+		var theUrl = uri + 'insert?'+ localStorage.getItem(String(num));
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
-		if(xmlHttp.result){
+        console.log(xmlHttp);
+		if(xmlHttp.statusText == 'OK'){
 			var json = JSON.parse(xmlHttp.responseText);
 			if(json.result == 'success')
                 const_unup--;
@@ -40,14 +42,14 @@
 		}
 		if(num-1 < 0){
             localStorage.setItem('unup',String(const_unup));
-            //jumpto("page0.html",window);
+            jumpto("page0.html",window);
         }
         else
            upload(num-1,const_unup);
     }
 	function upload2(num,const_unup)
     {
-		var theUrl = '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num));
+		var theUrl =uri + '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num));
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
@@ -66,7 +68,7 @@
 		}
 		if(num-1 < 0){
             localStorage.setItem('unup',String(const_unup));
-            //jumpto("confirm.html",window);
+            jumpto("confirm.html",window);
         }
         else
            upload2(num-1,const_unup);
