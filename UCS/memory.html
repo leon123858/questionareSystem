@@ -19,8 +19,60 @@
 </div>
 
 <script>
+	function upload(num,const_unup)
+    {
+		var theUrl = '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num));
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+		if(xmlHttp.result){
+			var json = JSON.parse(xmlHttp.responseText);
+			if(json.result == 'success')
+                const_unup--;
+			else{
+                alert("同步失敗,進入離線模式");
+                num = 0;
+            }
+		}
+		else{
+			alert("同步失敗,進入離線模式");
+            num = 0;
+		}
+		if(num-1 < 0){
+            localStorage.setItem('unup',String(const_unup));
+            //jumpto("page0.html",window);
+        }
+        else
+           upload(num-1,const_unup);
+    }
+	function upload2(num,const_unup)
+    {
+		var theUrl = '//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num));
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+		if(xmlHttp.result){
+			var json = JSON.parse(xmlHttp.responseText);
+			if(json.result == 'success')
+                const_unup--;
+			else{
+                alert("同步失敗,進入離線模式");
+                num = 0;
+            }
+		}
+		else{
+			alert("同步失敗,進入離線模式");
+            num = 0;
+		}
+		if(num-1 < 0){
+            localStorage.setItem('unup',String(const_unup));
+            //jumpto("confirm.html",window);
+        }
+        else
+           upload2(num-1,const_unup);
+    }
 	//var uri = 'http://140.116.183.176:8080/';
-    function upload(num,const_unup){
+    /*function upload(num,const_unup){
         $.ajax({
 　　　　　　'url':'//140.116.183.176:8080/insert?'+ localStorage.getItem(String(num)),
 　　　　　　'method':'GET',
@@ -75,7 +127,7 @@
                   upload2(num-1,const_unup);
           }
 　　　　  });
-    }
+    }*/
 $(document).ready(function() {
     var url = new URL(location.href);
     var mode = url.searchParams.get('mode');
