@@ -1,5 +1,6 @@
 ﻿'use strict';
 var http = require('https');
+var fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
 var sd = require('silly-datetime');
 
