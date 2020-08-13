@@ -26,7 +26,6 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
-        console.log(xmlHttp);
 		if(xmlHttp.statusText == 'OK'){
 			var json = JSON.parse(xmlHttp.responseText);
 			if(json.result == 'success')
@@ -53,7 +52,7 @@
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
-		if(xmlHttp.result){
+		if(xmlHttp.statusText == 'OK'){
 			var json = JSON.parse(xmlHttp.responseText);
 			if(json.result == 'success')
                 const_unup--;
