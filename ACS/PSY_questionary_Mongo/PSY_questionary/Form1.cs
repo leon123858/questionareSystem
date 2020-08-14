@@ -246,6 +246,11 @@ namespace PSY_questionary
                 dataGridView.DataSource = dt;
                 progressBar.Value = 90;
             }
+            else
+            {
+                setShow("無資料");
+                dataGridView.DataSource = null;
+            }
         }
         private void showOnDatagrid_Click(object sender, EventArgs e)
         {
@@ -582,6 +587,31 @@ namespace PSY_questionary
             }
         }
 
+        private void Edit_text_Click(object sender, EventArgs e)
+        {
+            setShow("修改文字檔,儲存後關閉, 下次開啟本應用程式就會更改問卷說明內容");
+            try
+            {
+                System.Diagnostics.Process.Start("ListNumber.txt");
+            }
+            catch (Exception et)
+            {
+                setShow(et.Message);
+            }
+        }
+
+        private void Manual_Click(object sender, EventArgs e)
+        {
+            setShow("修改文字檔,儲存後關閉, 下次開啟本應用程式就會更改問卷說明內容");
+            try
+            {
+                System.Diagnostics.Process.Start("Manual.pdf");
+            }
+            catch (Exception et)
+            {
+                setShow(et.Message);
+            }
+        }
 
         //private void Open_server_Click(object sender, EventArgs e)
         //{

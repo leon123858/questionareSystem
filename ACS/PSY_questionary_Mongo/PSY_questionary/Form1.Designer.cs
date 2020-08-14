@@ -48,28 +48,28 @@ namespace PSY_questionary
             this.outCSV_one = new System.Windows.Forms.Button();
             this.backup = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupbox3 = new System.Windows.Forms.GroupBox();
+            this.Manual = new System.Windows.Forms.Button();
+            this.edit_text = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.path_to_server = new System.Windows.Forms.TextBox();
-            this.reverse = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.delete_middle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.reverse = new System.Windows.Forms.Button();
             this.show = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.groupbox3 = new System.Windows.Forms.GroupBox();
-            this.delete_middle = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_which_qn)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.groupbox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -259,6 +259,63 @@ namespace PSY_questionary
             this.tabPage2.Text = "額外功能";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupbox3
+            // 
+            this.groupbox3.Controls.Add(this.Manual);
+            this.groupbox3.Controls.Add(this.edit_text);
+            this.groupbox3.Controls.Add(this.pictureBox1);
+            this.groupbox3.Controls.Add(this.path_to_server);
+            this.groupbox3.Controls.Add(this.label2);
+            this.groupbox3.Controls.Add(this.delete_middle);
+            this.groupbox3.Controls.Add(this.button1);
+            this.groupbox3.Controls.Add(this.label1);
+            this.groupbox3.Controls.Add(this.reverse);
+            this.groupbox3.Enabled = false;
+            this.groupbox3.Location = new System.Drawing.Point(3, 6);
+            this.groupbox3.Name = "groupbox3";
+            this.groupbox3.Size = new System.Drawing.Size(755, 382);
+            this.groupbox3.TabIndex = 7;
+            this.groupbox3.TabStop = false;
+            this.groupbox3.Text = "請詳閱說明後謹慎使用";
+            // 
+            // Manual
+            // 
+            this.Manual.Location = new System.Drawing.Point(5, 229);
+            this.Manual.Name = "Manual";
+            this.Manual.Size = new System.Drawing.Size(205, 60);
+            this.Manual.TabIndex = 9;
+            this.Manual.Text = "軟體說明書";
+            this.Manual.UseVisualStyleBackColor = true;
+            this.Manual.Click += new System.EventHandler(this.Manual_Click);
+            // 
+            // edit_text
+            // 
+            this.edit_text.Location = new System.Drawing.Point(5, 165);
+            this.edit_text.Name = "edit_text";
+            this.edit_text.Size = new System.Drawing.Size(205, 58);
+            this.edit_text.TabIndex = 8;
+            this.edit_text.Text = "更改問卷說明";
+            this.edit_text.UseVisualStyleBackColor = true;
+            this.edit_text.Click += new System.EventHandler(this.Edit_text_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
+            this.pictureBox1.Location = new System.Drawing.Point(225, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(524, 275);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // path_to_server
+            // 
+            this.path_to_server.Location = new System.Drawing.Point(466, 337);
+            this.path_to_server.Name = "path_to_server";
+            this.path_to_server.Size = new System.Drawing.Size(283, 29);
+            this.path_to_server.TabIndex = 3;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -267,6 +324,26 @@ namespace PSY_questionary
             this.label2.Size = new System.Drawing.Size(243, 18);
             this.label2.TabIndex = 6;
             this.label2.Text = "(非server無法使用關係連結圖)";
+            // 
+            // delete_middle
+            // 
+            this.delete_middle.Location = new System.Drawing.Point(5, 104);
+            this.delete_middle.Name = "delete_middle";
+            this.delete_middle.Size = new System.Drawing.Size(205, 55);
+            this.delete_middle.TabIndex = 5;
+            this.delete_middle.Text = "清空資料庫";
+            this.delete_middle.UseVisualStyleBackColor = true;
+            this.delete_middle.Click += new System.EventHandler(this.Delete_middle_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 305);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(205, 71);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "抓取非本地全數資料";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // label1
             // 
@@ -278,13 +355,6 @@ namespace PSY_questionary
             this.label1.TabIndex = 4;
             this.label1.Text = "server備分資料庫地址";
             // 
-            // path_to_server
-            // 
-            this.path_to_server.Location = new System.Drawing.Point(466, 337);
-            this.path_to_server.Name = "path_to_server";
-            this.path_to_server.Size = new System.Drawing.Size(283, 29);
-            this.path_to_server.TabIndex = 3;
-            // 
             // reverse
             // 
             this.reverse.Location = new System.Drawing.Point(5, 37);
@@ -294,16 +364,6 @@ namespace PSY_questionary
             this.reverse.Text = "抓取備分資料庫";
             this.reverse.UseVisualStyleBackColor = true;
             this.reverse.Click += new System.EventHandler(this.Reverse_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 71);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "抓取非本地全數資料";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // show
             // 
@@ -326,64 +386,6 @@ namespace PSY_questionary
             this.dataGridView.Size = new System.Drawing.Size(1232, 517);
             this.dataGridView.TabIndex = 2;
             // 
-            // groupbox3
-            // 
-            this.groupbox3.Controls.Add(this.button3);
-            this.groupbox3.Controls.Add(this.button2);
-            this.groupbox3.Controls.Add(this.pictureBox1);
-            this.groupbox3.Controls.Add(this.path_to_server);
-            this.groupbox3.Controls.Add(this.label2);
-            this.groupbox3.Controls.Add(this.delete_middle);
-            this.groupbox3.Controls.Add(this.button1);
-            this.groupbox3.Controls.Add(this.label1);
-            this.groupbox3.Controls.Add(this.reverse);
-            this.groupbox3.Enabled = false;
-            this.groupbox3.Location = new System.Drawing.Point(3, 6);
-            this.groupbox3.Name = "groupbox3";
-            this.groupbox3.Size = new System.Drawing.Size(755, 382);
-            this.groupbox3.TabIndex = 7;
-            this.groupbox3.TabStop = false;
-            this.groupbox3.Text = "請詳閱說明後謹慎使用";
-            // 
-            // delete_middle
-            // 
-            this.delete_middle.Location = new System.Drawing.Point(5, 104);
-            this.delete_middle.Name = "delete_middle";
-            this.delete_middle.Size = new System.Drawing.Size(205, 55);
-            this.delete_middle.TabIndex = 5;
-            this.delete_middle.Text = "清空資料庫";
-            this.delete_middle.UseVisualStyleBackColor = true;
-            this.delete_middle.Click += new System.EventHandler(this.Delete_middle_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.No;
-            this.pictureBox1.Location = new System.Drawing.Point(225, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(524, 275);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(5, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(205, 58);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "更改問卷說明";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(5, 229);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(205, 60);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "軟體說明書";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -404,10 +406,10 @@ namespace PSY_questionary
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.show_which_qn)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.groupbox3.ResumeLayout(false);
             this.groupbox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,8 +445,8 @@ namespace PSY_questionary
         private GroupBox groupbox3;
         private Button delete_middle;
         private PictureBox pictureBox1;
-        private Button button3;
-        private Button button2;
+        private Button Manual;
+        private Button edit_text;
     }
 }
 
