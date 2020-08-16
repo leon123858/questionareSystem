@@ -12,12 +12,37 @@
         @import "style.css"
     </style>
     <title>問卷系統</title>
+    
+    <script>
+        function handleFiles(files) {
+            if (files.length) {
+                var file = files[0];
+                var reader = new FileReader();
+                var str;
+                reader.readAsText(file);
+                reader.onload = function(e) {
+                    var rawLog = reader.result;
+                    alert(rawLog);
+                    str = rawLog.split('\n');
+                    localStorage.setItem('unup',parseInt(str[0]));
+                    for(var i=0;i < parseInt(str[0]);i++){
+                        localStorage.setItem(i.toString(),str[i+1]);
+                    }
+                    alert('input successful');
+                    jumpto("confirm.html",window);
+                };
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="fix_title">
     <h1>同步中</h1>
 </div>
-
+    <br><br><br><br><br><br><br><br>
+    <a style="font-size: 300%"></a>
+    <input type="file" id="file" onchange="handleFiles(this.files)" style='display: none'/>
+    
 <script>
     var uri = 'https://140.116.183.176:8080/';
 	function upload(num,const_unup)
@@ -139,6 +164,16 @@
           }
 　　　　  });
     }*/
+    function saveTextAsFile( _text ) {
+        var textFileAsBlob = new Blob([_text], {type:'text/plain'});
+        var downloadLink = $("a");
+        downloadLink.text("download link");
+        downloadLink.attr('download','data.txt');
+        var url = window.webkitURL.createObjectURL(textFileAsBlob);
+        downloadLink.attr('href',url);
+        //downloadLink.click();
+    }
+
 $(document).ready(function() {
     var url = new URL(location.href);
     var mode = url.searchParams.get('mode');
@@ -179,6 +214,28 @@ $(document).ready(function() {
         else{
             upload2(unup-1,const_unup);
         }
+    }
+    else if(mode == 'output'){
+        var str = unup.toString();
+        for(var i=0;i < unup;i++)
+            str += '\n' + localStorage.getItem(i.toString());
+        saveTextAsFile(str);
+    }
+    else if(mode == 'delete'){
+        if(prompt("你確定要刪除嗎???") == "1234"){
+            localStorage.setItem('unup','0');
+            alert("delete successful");
+        }
+        else
+            jumpto("confirm.html",window);
+    }
+    else if(mode == 'input'){
+        if(unup > 0){
+            alert("不可匯入資料 本機有資料未上傳 請先完成上傳再匯入");
+            jumpto("confirm.html",window);
+        }
+        else
+            $("input").show();   
     }
 });
 </script>
