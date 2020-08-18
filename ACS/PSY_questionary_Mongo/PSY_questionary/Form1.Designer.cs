@@ -34,8 +34,6 @@ namespace PSY_questionary
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ListNumber = new System.Windows.Forms.ListBox();
-            this.progress_word = new System.Windows.Forms.TextBox();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.clear_show = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.showData_all = new System.Windows.Forms.Button();
@@ -61,6 +59,7 @@ namespace PSY_questionary
             this.show = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.progress_word = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,7 +85,6 @@ namespace PSY_questionary
             // 
             this.tabPage1.Controls.Add(this.ListNumber);
             this.tabPage1.Controls.Add(this.progress_word);
-            this.tabPage1.Controls.Add(this.progressBar);
             this.tabPage1.Controls.Add(this.clear_show);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -104,29 +102,10 @@ namespace PSY_questionary
             this.ListNumber.Font = new System.Drawing.Font("新細明體", 13F);
             this.ListNumber.FormattingEnabled = true;
             this.ListNumber.ItemHeight = 26;
-            this.ListNumber.Location = new System.Drawing.Point(15, 213);
+            this.ListNumber.Location = new System.Drawing.Point(15, 187);
             this.ListNumber.Name = "ListNumber";
-            this.ListNumber.Size = new System.Drawing.Size(360, 160);
+            this.ListNumber.Size = new System.Drawing.Size(360, 186);
             this.ListNumber.TabIndex = 16;
-            // 
-            // progress_word
-            // 
-            this.progress_word.Font = new System.Drawing.Font("新細明體", 12F);
-            this.progress_word.Location = new System.Drawing.Point(15, 127);
-            this.progress_word.Name = "progress_word";
-            this.progress_word.ReadOnly = true;
-            this.progress_word.Size = new System.Drawing.Size(360, 36);
-            this.progress_word.TabIndex = 15;
-            this.progress_word.Text = "程式初始化:";
-            // 
-            // progressBar
-            // 
-            this.progressBar.Location = new System.Drawing.Point(15, 169);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(363, 34);
-            this.progressBar.Step = 1;
-            this.progressBar.TabIndex = 13;
-            this.progressBar.Value = 100;
             // 
             // clear_show
             // 
@@ -386,6 +365,16 @@ namespace PSY_questionary
             this.dataGridView.Size = new System.Drawing.Size(1232, 517);
             this.dataGridView.TabIndex = 2;
             // 
+            // progress_word
+            // 
+            this.progress_word.Font = new System.Drawing.Font("新細明體", 12F);
+            this.progress_word.Location = new System.Drawing.Point(12, 137);
+            this.progress_word.Name = "progress_word";
+            this.progress_word.ReadOnly = true;
+            this.progress_word.Size = new System.Drawing.Size(360, 36);
+            this.progress_word.TabIndex = 15;
+            this.progress_word.Text = "程式初始化:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -434,8 +423,6 @@ namespace PSY_questionary
         private GroupBox groupBox1;
         private Label show_qn_name;
         private Button clear_show;
-        private ProgressBar progressBar;
-        private TextBox progress_word;
         private ListBox ListNumber;
         private Button reverse;
         private Label label1;
@@ -447,6 +434,7 @@ namespace PSY_questionary
         private PictureBox pictureBox1;
         private Button Manual;
         private Button edit_text;
+        private TextBox progress_word;
     }
 }
 

@@ -71,18 +71,18 @@ namespace PSY_questionary
             try
             {
                 progress_word.Text = "備份進度:";
-                progressBar.Value = 0;
+                //progressBar.Value = 0;
                 //獲取雲資料
                 MongoClient dbClient_cloud = new MongoClient(uri);
                 MongoClient dbClient_local = new MongoClient(uri);
-                progressBar.Value += progressBar.Step * 10;
+                //progressBar.Value += progressBar.Step * 10;
                 for (int i = 0; i < q_count.Length; i++)
                 {
                     backupOne(dbClient_cloud, dbClient_local, "qn","qn_b", "qn" + i);
-                    progressBar.Value += progressBar.Step * 10;
+                    //progressBar.Value += progressBar.Step * 10;
                 }
                 backupOne(dbClient_cloud, dbClient_local, "personq","personq_b", "personall");
-                progressBar.Value = 100;
+                //progressBar.Value = 100;
                 setShow("完成資料備份");
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
@@ -213,12 +213,12 @@ namespace PSY_questionary
         void show_one_on_datagrid(int num)
         {
             progress_word.Text = "顯示進度:";
-            progressBar.Value = 0;
+            //progressBar.Value = 0;
             MongoClient dbClient_local = new MongoClient(uri);
-            progressBar.Value += progressBar.Step * 1;
+            //progressBar.Value += progressBar.Step * 1;
             var table = dbClient_local.GetDatabase("qn").GetCollection<BsonDocument>("qn" + num);
             var document = table.Find(new BsonDocument()).ToList();
-            progressBar.Value += progressBar.Step * 1;
+            //progressBar.Value += progressBar.Step * 1;
             if (document.Count > 0)
             {
                 DataTable dt = new DataTable();
@@ -226,7 +226,7 @@ namespace PSY_questionary
                 {
                     dt.Columns.Add(j.ToString(), typeof(string));
                 }
-                progressBar.Value += progressBar.Step * 10;
+                //progressBar.Value += progressBar.Step * 10;
                 foreach (var doc in document)
                 {
                     DataRow row = dt.NewRow();
@@ -238,13 +238,13 @@ namespace PSY_questionary
                     }
                     row[q_count[num] + 1] = doc["date"];
                     dt.Rows.Add(row);
-                    progressBar.Value += progressBar.Step * 1;
-                    if (progressBar.Value > 100)
-                        progressBar.Value = 0;
+                    //progressBar.Value += progressBar.Step * 1;
+                   //if (progressBar.Value > 100)
+                        //progressBar.Value = 0;
                 }
-                progressBar.Value += progressBar.Step * 1;
+                //progressBar.Value += progressBar.Step * 1;
                 dataGridView.DataSource = dt;
-                progressBar.Value = 90;
+                //progressBar.Value = 90;
             }
             else
             {
@@ -265,7 +265,7 @@ namespace PSY_questionary
             show.Text += "資料顯示第" + show_which_qn.Value.ToString() + "成功\r\n";
             outCSV_one.Enabled = true;
             outCSV_all.Enabled = false;
-            progressBar.Value = 100;
+            //progressBar.Value = 100;
         }
 
         //private void Button5_Click(object sender, EventArgs e)
@@ -370,12 +370,12 @@ namespace PSY_questionary
         void show_all_on_datagrid(ArrayList arrayList)
         {
             progress_word.Text = "顯示進度:";
-            progressBar.Value = 0;
+            //progressBar.Value = 0;
             MongoClient dbClient_local = new MongoClient(uri);
-            progressBar.Value += progressBar.Step * 1;
+            //progressBar.Value += progressBar.Step * 1;
             var table = dbClient_local.GetDatabase("personq").GetCollection<BsonDocument>("personall");
             var document = table.Find(new BsonDocument()).ToList();
-            progressBar.Value += progressBar.Step * 1;
+            //progressBar.Value += progressBar.Step * 1;
             if (document.Count > 0)
             {
                 DataTable dt = new DataTable();
@@ -383,7 +383,7 @@ namespace PSY_questionary
                 {
                     dt.Columns.Add(j.ToString(), typeof(string));
                 }
-                progressBar.Value += progressBar.Step * 10;
+                //progressBar.Value += progressBar.Step * 10;
                 foreach (var doc in document)
                 {
                     DataRow row = dt.NewRow();
@@ -393,13 +393,13 @@ namespace PSY_questionary
                         row[k] = doc[x];
                     }
                     dt.Rows.Add(row);
-                    progressBar.Value += progressBar.Step * 1;
-                    if (progressBar.Value > 100)
-                        progressBar.Value = 0;
+                    //progressBar.Value += progressBar.Step * 1;
+                    //if (progressBar.Value > 100)
+                        //progressBar.Value = 0;
                 }
-                progressBar.Value += progressBar.Step * 1;
+                //progressBar.Value += progressBar.Step * 1;
                 dataGridView.DataSource = dt;
-                progressBar.Value = 100;
+                //progressBar.Value = 100;
             }
         }
         private void showData_all_Click(object sender, EventArgs e)
@@ -542,18 +542,18 @@ namespace PSY_questionary
             try
             {
                 progress_word.Text = "復原進度:";
-                progressBar.Value = 0;
+                //progressBar.Value = 0;
                 //獲取雲資料
                 MongoClient dbClient_cloud = new MongoClient(uri);
                 MongoClient dbClient_local = new MongoClient(uri);
-                progressBar.Value += progressBar.Step * 10;
+                //progressBar.Value += progressBar.Step * 10;
                 for (int i = 0; i < q_count.Length; i++)
                 {
                     backupOne(dbClient_cloud, dbClient_local, "qn_b", "qn", "qn" + i);
-                    progressBar.Value += progressBar.Step * 10;
+                    //progressBar.Value += progressBar.Step * 10;
                 }
                 backupOne(dbClient_cloud, dbClient_local, "personq_b", "personq", "personall");
-                progressBar.Value = 100;
+                //progressBar.Value = 100;
                 setShow("完成資料回復");
             }
             catch (Exception et)
@@ -567,18 +567,18 @@ namespace PSY_questionary
             try
             {
                 progress_word.Text = "備份進度:";
-                progressBar.Value = 0;
+                //progressBar.Value = 0;
                 //獲取雲資料
                 MongoClient dbClient_cloud = new MongoClient(path_to_server.Text);
                 MongoClient dbClient_local = new MongoClient(uri);
-                progressBar.Value += progressBar.Step * 10;
+                //progressBar.Value += progressBar.Step * 10;
                 for (int i = 0; i < q_count.Length; i++)
                 {
                     backupOne(dbClient_cloud, dbClient_local, "qn", "qn_b", "qn" + i);
-                    progressBar.Value += progressBar.Step * 10;
+                    //progressBar.Value += progressBar.Step * 10;
                 }
                 backupOne(dbClient_cloud, dbClient_local, "personq", "personq_b", "personall");
-                progressBar.Value = 100;
+                //progressBar.Value = 100;
                 setShow("完成資料傳輸");
             }
             catch (Exception et)
